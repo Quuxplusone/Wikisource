@@ -2,13 +2,21 @@
 % https://books.google.com/books?id=8ipKAQAAMAAJ&pg=PA1
 % https://babel.hathitrust.org/cgi/pt?id=uc1.b2635535
 
+\input plain-utf8.tex
+
 \def\Ca{\smash{C\raise0.5ex\hbox{a}}}
+\def\duodecimo{12\raise0.5ex\hbox{o}}
+\def\pfn#1#2{\footnote{#1}{#2})}
+\def\subpfn#1#2{\footnote{#1}{#2}}
 \def\glqq{„}
 \def\grqq{“}
-\def\quoted#1 {\glqq{#1}\grqq}
-\def\itquoted#1 {\glqq{\it #1}\grqq}
-\def\section#1 {#1}           % but center and letterspace
-\def\emph#1 {#1}              % but letterspace
+\def\quoted#1{\glqq{#1}\grqq}
+\def\itquoted#1{\glqq{\it #1}\grqq}
+\def\section#1{\centerline{{\emph #1}}}
+\def\emph{\rm}              % but letterspace
+\def\vbar{|}
+\def\vvbar{‖}
+\def\fourdots{$\ldotp\ldotp\ldotp\ldotp$}
 
 \input de-footnotes.tex
 
@@ -95,15 +103,16 @@ d'Avellaneda, bien que remplie d'invectives contre l'auteur, a eu plus
 de succès que l'ouvrage même?}
 
 Im ganzen sind sechs {\emph Ausgaben in spanischer Sprache}
-erschienen.\pfn{3}{\footnotetextp3n3}
+erschienen.\pfn{3}{\footnotetextpiiiniii}
 
-In das Französische ist der {\it Don Quijote} Avellanedas zweimal\pfn{1}{\footnotetextp4n1}
+In das Französische ist der {\it Don Quijote} Avellanedas
+zweimal\pfn{1}{\footnotetextpivni}
 und in das Englische drei- oder vielleicht richtiger nur zweimal
-{\emph übersetzt} worden\pfn{2}{\footnotetextp4n2}.
+{\emph übersetzt} worden\pfn{2}{\footnotetextpivnii}.
 
 Von der {\emph französischen Bearbeitung des Lesage} gibt
 es sechs Ausgaben und ausserdem Übersetzungen ins Englische,
-Holländische und Deutsche\pfn{1}{\footnotetext{p5n1}}.
+Holländische und Deutsche\pfn{1}{\footnotetextpvni}.
 
 Daraus geht hervor, dass Avellanedas Fortsetzung nur in der
 Fassung von Lesage einige Aufnahme gefunden hat. Von den sechs
@@ -115,7 +124,7 @@ Eine Übersetzung von Lesages {\it Don Quichotte} muss auch in Popes
 Hände gelangt sein und ihm Stoff zu einer Bemerkung in seinem
 {\it Essay on Critricism}\pfn{2}{} geliefert haben. Für eine Stelle in
 Sternes {\it Sentimental Journey}\pfn{3}{Tauchnitz ed.~S.~22.},
-die Becker\pfn{4}{Becker, {\it die Aufnahme des Don Quixote in die engl.~Litteratur.
+die Becker\pfn{4}{Becker, {\it die Aufnahme des Don Quixote in die engl.~Litteratur.}
 Diss. Berlin 1903.} anführt,
 ist das Vorbild bei Lesage Cap.~10 zu suchen.
 
@@ -133,7 +142,7 @@ Isidro Perales\pfn{1}{{\itquoted El autor de este Don Quijote
 no es Alonso Fernandez de Avellaneda,
 natural de Tordesillas, porque constando de lo que Cervantes dice que el autor
 es aragonés y no habiendo lugar en Aragon que se llame Tordesillas, se debe
-conjeturar que quien fingió su patria, fingiría al nombre}\ldots}
+conjeturar que quien fingió su patria, fingiría al nombre}\dots}
 bedurft ---, trat die Frage nach dem wahren Verfasser
 des unechten zweiten Teiles in den Vordergrund. Denn von ihrer
 Lösung erhoffte man auch Aufschlüsse über die litterarischen Streitigkeiten
@@ -154,7 +163,7 @@ aun quiso que se supiese su nombre para que con la misma infamia
 no lograse alguna fama.} Wenn Cervantes Avellaneda {\it señor autor}
 nennt, so drückt das kaum Hochachtung aus, {\it Grande} nennt er ihn
 dagegen nirgends; es scheint mir dies auf einem Missverständnis zu
-beruhen (--- {\it la (affliccion) que debe tener este señor sin duda es grande\ldots})
+beruhen (--- {\it la (affliccion) que debe tener este señor sin duda es grande\dots})
 
 Hatte der {\emph Padre Murillo} in seiner {\it Geografía histórica}~(1752)
 behauptet, dass Avellaneda ein Geistlicher gewesen sein müsse, geht
@@ -175,7 +184,7 @@ Fernan Nuñez enthalten sind und einem {\it certámen} entstammen, das am
 16.~Oktober~1614 bei Gelegenheit der Seligsprechung der Santa Teresa
 de~Jesús in Zaragoza stattfand, glaubte er Anspielungen auf Avellanedas
 Werk zu finden. Indessen ist das wenig wahrscheinlich. Vielmehr wird
-es sich auf einen Studenten\pfn{1}{\footnotetextp7n1}
+es sich auf einen Studenten\pfn{1}{\footnotetextpviini}
 beziehen\pfn{2}{cf.~Tubino, {\it Cervantes y el Quijote.} Madrid~1872, S.~18~ff.},
 der in der Maske Sancho
 Panzas an dem {\it certámen} teilgenommen und keinen Preis erhalten hatte.
@@ -229,3 +238,7 @@ Andrés Perez etc.) können wir uns hier auf solche beschränken
 die entweder durch ihren jüngeren Ursprung oder durch die mehrfache
 Unterstützung, die sie gefunden haben, eine besondere Besprechung
 heischen.
+
+
+
+\end

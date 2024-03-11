@@ -4,20 +4,23 @@
 
 \input plain-utf8.tex
 
+\font\footnotesize=cmr8
+
 \def\Ca{\smash{C\raise0.5ex\hbox{a}}}
 \def\duodecimo{12\raise0.5ex\hbox{o}}
 \def\pfn#1#2{\footnote{#1}{#2})}
-\def\subpfn#1#2{\footnote{#1}{#2}}
-\def\glqq{„}
-\def\grqq{“}
-\def\quoted#1{\glqq{#1}\grqq}
-\def\itquoted#1{\glqq{\it #1}\grqq}
+\def\subpfn#1#2{\footnote{#1}{#2})}
+\def\glqq{\smash{\raise-1.1ex\hbox{''}}}
+\def\grqq{\hbox{``}}
+\def\quoted{\glqq\aftergroup\grqq}
+\def\itquoted{\it\glqq\aftergroup\grqq}
 \def\section#1{\centerline{{\emph #1}}}
 \def\emph{\rm}              % but letterspace
 \def\vbar{|}
-\def\vvbar{‖}
+\def\vvbar{$\|\|$\ }
 \def\fourdots{$\ldotp\ldotp\ldotp\ldotp$}
 \def\originalpage#1{}
+\def\longequals{$=\joinrel=$}
 
 \input de-footnotes.tex
 
@@ -94,7 +97,7 @@ promovit et comitatus est.}},
 die nicht viel mehr enthält, als was schon der Titel des Buches sagt.
 Im 17.~Jahrhundert ist keine neue Auflage erschienen, so dass das Buch zur
 \originalpage{3}
-Zeit Lesages\pfn{1}{cf. Vorrede zu seiner Übersetzung; die dort erwähnte Legende,
+Zeit Lesages\pfn{1}{cf.~Vorrede zu seiner Übersetzung; die dort erwähnte Legende,
 dass die Freunde des Cervantes alle erreichbaren Exemplare des falschen {\it Don Quijote}
 verbrannt hätten, scheint mir auf {\it D.~Q.}~II,~70 zu beruhen. (Altisidoras Traum:
 die Teufelchen spielen mit Avellanedas {\it Don Quijote} Ball und werfen ihn dann
@@ -127,7 +130,7 @@ Spuren von Lesages Buch.
 
 Eine Übersetzung von Lesages {\it Don Quichotte} muss auch in Popes
 Hände gelangt sein und ihm Stoff zu einer Bemerkung in seinem
-{\it Essay on Critricism}\pfn{2}{} geliefert haben. Für eine Stelle in
+{\it Essay on Critricism}\pfn{2}{\footnotetextpvnii} geliefert haben. Für eine Stelle in
 Sternes {\it Sentimental Journey}\pfn{3}{Tauchnitz ed.~S.~22.},
 die Becker\pfn{4}{Becker, {\it die Aufnahme des Don Quixote in die engl.~Litteratur.}
 Diss. Berlin 1903.} anführt,
@@ -226,7 +229,7 @@ Anspielung {\it (sinónimos voluntarios?)}\/, in dem {\it escrutinio}
 \item 4. Er war ein Freund Lope de Vegas (vgl.~Vorrede Avellanedas).
 
 \item \originalpage{8} 5. Er muss, wenn er nicht Mönch war, wenigstens
-Theologie studiert haben (cf. Pellicer, a.~a.~O.~S. 159~ff.).
+Theologie studiert haben (cf.~Pellicer, a.~a.~O.~S. 159~ff.).
 
 \item 6. Er war Aragonier ({\it D.~Q.}~II,~59).
 
@@ -248,7 +251,8 @@ heischen.
 
 Am erfolgreichsten war die viel umstrittene {\emph Aliagatheorie}, die
 1846 von {\emph Adolfo de Castro}\pfn{1}{{\it El Conde-Duque de~Olivares
-y el rey Felipe~IV. (Cadiz~1846) und {\it Miguel de Cervantes y dos inquisidores}~(1872).}
+y el rey Felipe~IV.} (Cadiz~1846) und {\it Miguel
+de~Cervantes y dos inquisidores}~(1872).}
 aufgestellt wurde und trotz des~1872
 von Tubino\pfn{2}{Tubino, a.~a.~O. S.~1--82.} gelieferten Gegenbeweises
 in neuerer Zeit so an Bedeutung
@@ -265,17 +269,98 @@ und Don Cayetano Rosell\pfn{6}{Einleitung zu
 zu der Hypothese Adolfo de Castro gab folgendes Gedicht des Grafen
 Villamediana\pfn{7}{Biblioteca Nacional M.~200.}:
 
-\indent \glqq Sancho Panza, el confesor\cr
-\indent Del ya difunto monarca,\cr
-\indent Que de la vena del arca\cr
-\indent Fué de Osuna sangrador,\cr
-\indent El cuchillo de dolor\cr
-\indent Lleva á Huete atravesado\cr
-\indent \originalpage{9} Y en tan miserable estado,\cr
-\indent Que será, segun he oido,\cr
-\indent De inquisidor inquirido,\cr
-\indent De confesor confesado .\grqq
+\vskip 0.5em
 
+{\obeylines\parindent=2in%
+\glqq Sancho Panza, el confesor
+Del ya difunto monarca,
+Que de la vena del arca
+Fué de Osuna sangrador,
+El cuchillo de dolor
+Lleva á Huete atravesado
+\originalpage{9} Y en tan miserable estado,
+Que será, segun he oido,
+De inquisidor inquirido,
+De confesor confesado.\grqq
+}
 
+\vskip 0.5em
+
+Dieses Gedicht, das zu den zahlreichen Spottversen gehört, die den
+Sturz Aliagas\pfn{1}{Über den Sturz Aliagas siehe Quevedo,
+{\it Grandes Anales de quince días.} --- Fernandez-Guerra, {\it Obras}~I, S.~203.}
+im Jahre~1621 begleiteten, bezieht sich auf einen Prozess
+des Herzogs von Osuna, bei dem Aliaga diesem Dienste geleistet und
+sich dafür hatte bezahlen lassen\pfn{2}{Dunkle Anspielungen darauf in Quevedo,
+{\it Epistolario} ({\it Obras} ed.\ Fernandez-Guerra S.~575) vgl.~auch Tubino,
+a.~a.~O. S.~273.}. Die Vertreter der Aliagatheorie
+behaupten, dass Aliaga den Spottnamen Sancho Panza und zwar von
+Jugend geführt habe, und sehen auch in den bereits zitierten Cuadrillos
+aus dem Certamen von Zaragoza Anspielungen auf ihn. Cervantes hatte
+ihn dadurch beleidigt, dass er den Spottnamen des Paters seinem Schildknappen
+beigelegt habe. Mit mehr Recht wird man wohl annehmen
+dürfen, dass Villamediana dem Beichtvater den Namen Sancho Panzas
+gegeben hat, indem er in ironischer Weise auf des Knappen uneigennützige
+Verwaltung der Insel Barataria Bezug nimmt. Ob Cervantes
+Aliaga, der bis zum Jahre~1602 sein Kloster in Zaragoza nicht verlassen
+hat, zur Abfassungszeit des ersten Teiles gekannt hat, lässt sich nicht
+feststellen. Allerdings hat er sich~1595 an einem poetischen
+Wettbewerb\pfn{3}{Von den Dominikanern zu Ehren des heiligen Hyacinthus veranstaltet,
+cf.~Fitzmaurice-Kelly, {\it Life of Cervantes} S.~197.}
+in Zaragoza beteiligt. Man weiss aber nicht, ob er auch persönlich dort
+gewesen ist.
+
+Um Aliaga als Schriftsteller ausgeben zu können, schrieb man ihm
+ein pseudonymes Pamphlet gegen Quevedo zu: die {\it l'enganza de la lengua
+española contra el autor del Cuento de Cuentos, por Don Juan Alonso
+Laureles, caballero de habito y peon de costumbre, aragones liso y
+castellano revuelto.} Huesca~1629\pfn{4}{Dies ist die früheste Ausgabe,
+neugedruckt in {\it Semanario erudito} de Don
+Antonio Valladares de~Sotomayor. Madrid~1787. S.~264~ff.}.
+
+Auf die Frage, ob überhaupt stilistische Ähnlichkeiten zwischen
+dieser Schrift und dem {\it Don Quijote} von Avellaneda bestehen, werde
+ich später zurückkommen. Die Verfasserschaft Aliagas ist schon deshalb
+unmöglich, weil diese Streitschrift frühestens~1628 verfasst ist,
+der Exbeichtvater aber bereits~1626 gestorben ist. Diese Datierung verlangen
+\originalpage{10}
+die Anspielungen auf Quevedos {\it Sueños}\pfn{1}{Fernandez-Guerra,
+{\it Obras}~I, S.~198.}~(1627) und auf seinen {\it Discurso
+de todos los Diablos}~(1628)\pfn{2}{\footnotetextpxnii}.
+La Barrera glaubt in einer Episode des
+{\it D. Q.}~(II, 61) eine Anspielung auf Aliaga (Stachelginster \longequals aliaga) zu
+sehen. Endlich hat Asensio aus den Anfangsworten des Avellaneda'schen
+Werkes ein Anagramm herausgelesen: {\itquoted El sabio A~l~i~solan, historiador
+no menos moderno que verdadero, dice que siendo expelido los moros
+a~g~a~renos \dots} Schliesslich hat ein Anagramm den Zweck, dass es dem
+Leser sofort in die Augen fällt. Das tut dieses aber nicht. Was endlich
+die Verfasserschaft Aliagas vollkommen unmöglich erscheinen lässt, ist
+seine Stellung. In den Jahren 1609--1613, wo ein grosser Teil der
+Regierungsgeschäfte auf seinen Schultern ruhte, wird er kaum Zeit gehabt
+haben, einen Roman zu schreiben. Ihm standen ja auch andere Mittel
+zu Gebote, wenn er sich für irgend etwas an Cervantes hätte rächen
+wollen. Ich glaube, dass sich aus dieser vielleicht etwas flüchtigen Prüfung
+der Hypothese Adolfo de~Castros ergeben hat, dass der Beichtvater Luis
+Aliaga nicht mit dem Verfasser des falschen {\it Don Quijote} identisch
+sein kann.
+
+Gewisse Ähnlichkeit mit dieser Hypothese in der Verwendung des
+Beweismaterials hat eine andere, die von {\emph Marcelino Menendez y
+Pelayo}\pfn{3}{{\it El Imparcial} (15.~Febr.~1897).} aufgestellt wurde.
+Unter den im Zaragozaer Certámen genannten Dichtern wählte er sich einen aus:
+{\emph Alonso Lamberto}, der
+sich schon deshalb für seine Zwecke eignete, weil man nicht das Geringste
+von ihm weiss. Aus den Buchstaben der ersten vier Wörter des Buches
+setzt er sich den Namen zusammen und erklärt auch Solisdán ({\it De Solisdán
+á Don Quixote}, Soneto) als eine Umstellung von Don Alonso.
+Groussac\pfn{4}{Groussac, {\it Une énigme littéraire: le Don Quichotte
+d'Avellaneda.} Paris~1903.}
+wird wohl das Richtigere getroffen haben, wenn er in Solisdán ein
+Anagramm von Lasindo\pfn{5}{L., der Schildknappe Bruneos de~Bonamar
+cf.~{\it Amadis de Gaula}~III,~3, 13, IV,~20 etc.}
+sieht. Ein näheres Verhältnis Lambertos zu Lope
+de~Vega ist ebenso wenig erwiesen, wie seine Verwandtschaft mit Don
+Martin Lamberto Iñigues, die übrigens nicht genügen würde, um ihn als
+berufsmässigen Schriftsteller zu kennzeichnen.
 
 \end

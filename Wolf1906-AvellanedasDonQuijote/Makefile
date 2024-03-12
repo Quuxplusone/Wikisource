@@ -1,5 +1,5 @@
-de-main.pdf: de-main.tex de-footnotes.tex plain-utf8.tex
-	pdftex de-main.tex
+de.pdf: de.tex de-main.tex de-footnotes.tex de-biblio.tex plain-utf8.tex
+	pdftex de.tex
 
-en-main.pdf: en-main.tex en-footnotes.tex plain-utf8.tex
-	pdftex -o en-main.tex
+en.pdf: en.tex en-main.tex en-footnotes.tex en-biblio.tex plain-utf8.tex
+	pdftex en.tex

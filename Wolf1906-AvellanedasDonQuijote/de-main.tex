@@ -4,14 +4,43 @@
 
 \input plain-utf8.tex
 
-\font\footnotesize=cmr8
+\def\english{\language0}
+\def\german{\language1}
+\def\french{\language2}
+\def\spanish{\language3}
+\def\latin{\spanish}
+\def\italian{\spanish}
+\def\catalan{\spanish}
 
-\def\Ca{\smash{C\raise0.5ex\hbox{a}}}
-\def\duodecimo{12\raise0.5ex\hbox{o}}
-\def\pfn#1#2{\footnote{#1}{#2})}
-\def\subpfn#1#2{\footnote{#1}{#2})}
-\def\glqq{\smash{\raise-1.1ex\hbox{''}}}
+\font\tenrm=cmr10 \font\eightrm=cmr8 \font\sixrm=cmr6 \font\fiverm=cmr5
+\font\tenit=cmti10 \font\eightit=cmti8
+
+\def\eightpoint{\def\rm{\fam0\eightrm}% switch to 8-point type
+  \textfont0=\eightrm \scriptfont0=\sixrm \scriptscriptfont0=\fiverm
+  \textfont\itfam=\eightit \def\it{\fam\itfam\eightit}%
+  \normalbaselineskip=9pt
+  \setbox\strutbox=\hbox{\vrule height7pt depth2pt width0pt}%
+  \let\sc=\sixrm \normalbaselines\rm}
+
+\catcode`\@=11
+\def\vfootnote#1{\insert\footins\bgroup
+  \interlinepenalty\interfootnotelinepenalty
+  \splittopskip\ht\strutbox % top baseline for broken footnotes
+  \splitmaxdepth\dp\strutbox \floatingpenalty\@MM
+  \leftskip\z@skip \rightskip\z@skip \spaceskip\z@skip \xspaceskip\z@skip
+  \eightpoint\baselineskip=10pt%%%%%%%%%%%<<<<<<<<<<<ADDED
+  \textindent{#1}\footstrut\futurelet\next\fo@t}
+\catcode`\@=12
+
+\def\sup#1{$^{{\rm #1}}$}
+\def\Ca{\smash{C\raise0.5ex\hbox{\sixrm a}}}
+\def\duodecimo{12\raise0.5ex\hbox{\sixrm o}}
+\def\pfn#1#2{\footnote{$^#1$)}{#2}}
+\def\subpfn#1#2{\footnote{$^#1$)}{#2}}
+\def\glqq{\smash{\raise-1.2ex\hbox{''}}}
 \def\grqq{\hbox{``}}
+\def\glq{\smash{\raise-1.2ex\hbox{'}}}
+\def\grq{\hbox{`}}
 \def\quoted{\glqq\aftergroup\grqq}
 \def\itquoted{\it\glqq\aftergroup\grqq}
 \def\section#1{\centerline{{\emph #1}}}
@@ -20,9 +49,10 @@
 \def\vvbar{$\|\|$\ }
 \def\fourdots{$\ldotp\ldotp\ldotp\ldotp$}
 \def\originalpage#1{}
-\def\longequals{$=\joinrel=$}
+\def\longeq{$=\joinrel=$}
 
 \input de-footnotes.tex
+\german
 
 Avellanedas DON QUIJOTE,
 sein Verhältnis zu Cervantes
@@ -56,8 +86,7 @@ Ihr schliessen sich an der {\it Amadis de Gaula} und andere berühmte
 Ritterromane, die {\it Diana} von Montemayor und der {\it Lazarillo de Tormes.}
 Unter ganz ähnlichen Umständen wie der falsche {\it Don Quijote} ist eine
 Fortsetzung von Mateo Alemans {\it Guzman de Alfarache} entstanden,
-die~1602\pfn{1}{Nach Perez Pastor; vgl.\ dazu Morel-Fatio,
-{\it Bull. Hisp.}~V,~4, S.~361.} in Valencia unter dem Pseudonym
+die~1602\pfn{1}{\piini} in Valencia unter dem Pseudonym
 Mateo Luxan de Sayavedra
 (d.~i.\ Iuan Marti, ein valencianischer Advokat) erschienen ist. Während
 sich hier der Entlarvung des Pseudonyms infolge der deutlichen Hinweise
@@ -81,46 +110,34 @@ der zweite Teil dieser Arbeit handeln.
 
 Avellanedas Fortsetzung des {\it Don Quijote} scheint keinen Erfolg
 gehabt zu haben. Die Zeitgenossen schweigen vollkommen darüber;
-selbst in dem umfangreichen Briefwechsel Lope de~Vegas\pfn{2}{Das
-Wichtigste ist veröffentlicht in der Biographie von Cayetano Alberto
-de la Barrera ({\it Obras} de Lope de~Vega publicadas por la Real Academia Española,
-Madrid~1890~ff., I.~Bd.).} mit dem
+selbst in dem umfangreichen Briefwechsel Lope de~Vegas\pfn{2}{\piinii} mit dem
 Herzog von Sessa, in dem sonst alle litterarischen Ereignisse von einiger
 Wichtigkeit ihren Widerhall fanden, wird sie nirgends erwähnt. Das
 einzige Zeugnis über Avellanedas Buch aus dem 17.~Jahrhundert ist eine
 kurze Notiz in Nicolas Antonio, {\it Bibliotheca Hispana Nova}
-(1672--79)\pfn{3}{Zweite Auflage von Francisco Perez Bayer,
-Madrid~1783--88: {\itquoted Alphonsus Fernandez de Avellaneda,
-patria ex oppido Tordesillas Pincianae diœcesis, continuavit
-sed absque genio illo qui principem Michaelis Cervantes ad inventionem
-promovit et comitatus est.}},
+(1672--79)\pfn{3}{\piiniii},
 die nicht viel mehr enthält, als was schon der Titel des Buches sagt.
 Im 17.~Jahrhundert ist keine neue Auflage erschienen, so dass das Buch zur
 \originalpage{3}
-Zeit Lesages\pfn{1}{cf.~Vorrede zu seiner Übersetzung; die dort erwähnte Legende,
-dass die Freunde des Cervantes alle erreichbaren Exemplare des falschen {\it Don Quijote}
-verbrannt hätten, scheint mir auf {\it D.~Q.}~II,~70 zu beruhen. (Altisidoras Traum:
-die Teufelchen spielen mit Avellanedas {\it Don Quijote} Ball und werfen ihn dann
-in den Abgrund der Hölle.)} schon äusserst selten war. Es ist mir daher
-unbegreiflich, wie Puisbusque\pfn{2}{{\it Histoire
-comparée des littératures française et espagnole,} 1843, Bd.~I, S.~29.}
+Zeit Lesages\pfn{1}{\piiini} schon äusserst selten war. Es ist mir daher
+unbegreiflich, wie Puisbusque\pfn{2}{\piiinii}
 fragen kann: {\itquoted Pourquoi la prétendue suite
 d'Avellaneda, bien que remplie d'invectives contre l'auteur, a eu plus
 de succès que l'ouvrage même?}
 
 Im ganzen sind sechs {\emph Ausgaben in spanischer Sprache}
-erschienen.\pfn{3}{\footnotetextpiiiniii}
+erschienen.\pfn{3}{\piiiniii}
 
 \originalpage{4}
 In das Französische ist der {\it Don Quijote} Avellanedas
-zweimal\pfn{1}{\footnotetextpivni}
+zweimal\pfn{1}{\pivni}
 und in das Englische drei- oder vielleicht richtiger nur zweimal
-{\emph übersetzt} worden\pfn{2}{\footnotetextpivnii}.
+{\emph übersetzt} worden\pfn{2}{\pivnii}.
 
 \originalpage{5}
 Von der {\emph französischen Bearbeitung des Lesage} gibt
 es sechs Ausgaben und ausserdem Übersetzungen ins Englische,
-Holländische und Deutsche\pfn{1}{\footnotetextpvni}.
+Holländische und Deutsche\pfn{1}{\pvni}.
 
 Daraus geht hervor, dass Avellanedas Fortsetzung nur in der
 Fassung von Lesage einige Aufnahme gefunden hat. Von den sechs
@@ -130,10 +147,9 @@ Spuren von Lesages Buch.
 
 Eine Übersetzung von Lesages {\it Don Quichotte} muss auch in Popes
 Hände gelangt sein und ihm Stoff zu einer Bemerkung in seinem
-{\it Essay on Critricism}\pfn{2}{\footnotetextpvnii} geliefert haben. Für eine Stelle in
-Sternes {\it Sentimental Journey}\pfn{3}{Tauchnitz ed.~S.~22.},
-die Becker\pfn{4}{Becker, {\it die Aufnahme des Don Quixote in die engl.~Litteratur.}
-Diss. Berlin 1903.} anführt,
+{\it Essay on Critricism}\pfn{2}{\pvnii} geliefert haben. Für eine Stelle in
+Sternes {\it Sentimental Journey}\pfn{3}{\pvniii},
+die Becker\pfn{4}{\pvniv} anführt,
 ist das Vorbild bei Lesage Cap.~10 zu suchen.
 
 \section{2. Die Verfasserfrage.}
@@ -147,11 +163,7 @@ genau, mit wem sie es zu tun hatten. Seit es eine Cervantesbiographie
 gibt, ist daher auch seinem Nachahmer besondere Aufmerksamkeit zu
 teil geworden. Nachdem es einmal feststand, dass man ein Pseudonym
 vor sich hatte, --- es hätte dazu nicht erst der Beweise von
-Isidro Perales\pfn{1}{{\itquoted El autor de este Don Quijote
-no es Alonso Fernandez de Avellaneda,
-natural de Tordesillas, porque constando de lo que Cervantes dice que el autor
-es aragonés y no habiendo lugar en Aragon que se llame Tordesillas, se debe
-conjeturar que quien fingió su patria, fingiría al nombre}\dots}
+Isidro Perales\pfn{1}{\pvini}
 bedurft ---, trat die Frage nach dem wahren Verfasser
 des unechten zweiten Teiles in den Vordergrund. Denn von ihrer
 Lösung erhoffte man auch Aufschlüsse über die litterarischen Streitigkeiten
@@ -160,7 +172,7 @@ trotz der nunmehr etwa hundertundsechzig Jahre währenden Bemühungen
 der Cervantisten, den Plagiator zu entlarven, ist bis jetzt noch keine
 befriedigende Lösung der Autorfrage geliefert worden.
 
-{\emph Gregorio Mayans y Siscar}\pfn{2}{{\it Vida de Cervantes,} Londoner Ausg.~1738.},
+{\emph Gregorio Mayans y Siscar}\pfn{2}{\pvinii},
 der erste Biograph des berühmten Spaniers, drückt sich noch sehr
 zurückhaltend aus: {\itquoted Aquellas
 palabras {\rm (Vorrede zum 2.~Teil)} Señor i Grande son misteriosas para
@@ -176,14 +188,13 @@ beruhen (--- {\it la (affliccion) que debe tener este señor sin duda es grande\
 
 Hatte der {\emph Padre Murillo} in seiner {\it Geografía histórica}~(1752)
 behauptet, dass Avellaneda ein Geistlicher gewesen sein müsse, geht
-{\emph Vicente de los Ríos}\pfn{3}{{\it Vida de Cervantes}
-S.~30~ff., Ausgabe der Kgl.~Span.~Akademie. Madrid,~1780.}
+{\emph Vicente de los Ríos}\pfn{3}{\pviniii}
 weiter und meint, er, müsse als Geistlicher
 die dritten Weihen empfangen haben. Ausserdem nimmt er den aragonesischen
 Ursprung nach {\it D.~Q.} Cap.~59 als sicher an und vermutet in
 ihm einen Komödiendichter, der sich durch eine versteckte Kritik seiner
 Komödien im 1.~Teil verletzt gefühlt habe. Erstere Annahme sucht
-{\emph Pellicer}\pfn{4}{{\it Vida de Cervantes,} 1797.}
+{\emph Pellicer}\pfn{4}{\pviniv}
 noch durch einige Beispiele aus der Sprache des Buches
 \originalpage{7}
 besser zu begründen. Ferner behauptet er, dass Avellaneda ein Dominikaner
@@ -194,9 +205,8 @@ Fernan Nuñez enthalten sind und einem {\it certámen} entstammen, das am
 16.~Oktober~1614 bei Gelegenheit der Seligsprechung der Santa Teresa
 de~Jesús in Zaragoza stattfand, glaubte er Anspielungen auf Avellanedas
 Werk zu finden. Indessen ist das wenig wahrscheinlich. Vielmehr wird
-es sich auf einen Studenten\pfn{1}{\footnotetextpviini}
-beziehen\pfn{2}{cf.~Tubino, {\it Cervantes y el Quijote.} Madrid~1872, S.~18~ff.},
-der in der Maske Sancho
+es sich auf einen Studenten\pfn{1}{\pviini}
+beziehen\pfn{2}{\pviinii}, der in der Maske Sancho
 Panzas an dem {\it certámen} teilgenommen und keinen Preis erhalten hatte.
 Es lautet: {\itquoted Sancho Panza, estudiante, \vbar Oficial ó pascante, \vbar
 Cosa justa á su talento, \vbar Le dará el verdugo ciento\pfn{3}{Näheres
@@ -326,9 +336,9 @@ der Exbeichtvater aber bereits~1626 gestorben ist. Diese Datierung verlangen
 \originalpage{10}
 die Anspielungen auf Quevedos {\it Sueños}\pfn{1}{Fernandez-Guerra,
 {\it Obras}~I, S.~198.}~(1627) und auf seinen {\it Discurso
-de todos los Diablos}~(1628)\pfn{2}{\footnotetextpxnii}.
+de todos los Diablos}~(1628)\pfn{2}{\pxnii}.
 La Barrera glaubt in einer Episode des
-{\it D. Q.}~(II, 61) eine Anspielung auf Aliaga (Stachelginster \longequals aliaga) zu
+{\it D. Q.}~(II, 61) eine Anspielung auf Aliaga (Stachelginster \longeq aliaga) zu
 sehen. Endlich hat Asensio aus den Anfangsworten des Avellaneda'schen
 Werkes ein Anagramm herausgelesen: {\itquoted El sabio A~l~i~solan, historiador
 no menos moderno que verdadero, dice que siendo expelido los moros
@@ -362,5 +372,125 @@ sieht. Ein näheres Verhältnis Lambertos zu Lope
 de~Vega ist ebenso wenig erwiesen, wie seine Verwandtschaft mit Don
 Martin Lamberto Iñigues, die übrigens nicht genügen würde, um ihn als
 berufsmässigen Schriftsteller zu kennzeichnen.
+
+\originalpage{11}
+Menendez y Pelayo hält es nicht für unmöglich, dass auch die
+bereits erwähnte {\it Venganza de la lengua española} von Alonso Lamberto
+stammt. Da müsste man doch erst einmal feststellen, ob wirklich
+Stilähnlichkeiten\pfn{1}{\pxini}
+zwischen Laureles und Avellaneda bestehen. Die {\it Venganza}
+ist ein Erzeugnis der aus streng religiösen Kreisen hervorgehenden
+Opposition gegen Quevedo, die noch mehr Streitschriften\pfn{2}{\pxinii}
+gegen ihn
+geliefert hat. Die Polemik gegen die sprachlichen Bestrebungen dieses
+Satirikers im {\it Cuento de Cuentos}~(1626), der den Kampf gegen die
+sprichwörtliche Ausdrucksweise im Spanischen wiedereröffnet, den der Verfasser
+im Jahre~1600 mit einer {\it Pregmática}\pfn{3}{\pxiniii}
+begonnen und in der {\it Visita de los
+chistes} fortgeführt hatte, dienen dem Pamphletisten nur als Vorwand für
+andere Anklagen. In philologischer Hinsicht dürfen wir ihm allerdings
+Recht geben. Doch, er hält sich nicht lange mit diesen Fragen auf, bald
+geht er, seiner eigentlichen Absicht entsprechend, zum Kernpunkt seiner
+Gegnerschaft über, indem er darauf aufmerksam macht, welche Gefahr
+in moralischer\pfn{4}{Er erwähnt den {\it Buscon}~(1626),
+das {\it Capitulo de los gatos}~(1627) und das
+damals noch nicht gedruckte Schriftchen {\it Gracias y desgracias del ojo del c.}}
+und religiöser Beziehung die Werke Quevedos durch
+die Verspottung des geistlichen Standes\pfn{5}{\pxinv}
+in sich bergen. Die ganze
+schlau berechnete Art seiner Polemik, bei der er immer wieder darauf
+zurückkommt, dass er dem Autor im Grunde wohl wolle und ihm anrate,
+etwas vorsichtiger zu sein und Lope de~Vega nachzuahmen, ist grundverschieden
+von dem unvorsichtigen, täppischen Zuschlagen Avellanedas.
+Die angebliche Ähnlichkeit in dem Stile der beiden Schriftsteller habe
+ich nicht finden können, zumal da nicht gesagt wird, worin sie eigentlich
+\originalpage{12}
+bestehen soll. Vielmehr hat die {\it Venganza} eine Stileigenheit, die ich an
+Avellaneda nicht bemerkt habe, ich meine das Spielen mit gleichlautenden
+Worten verschiedener Bedeutung und verschiedenen Worten gleichen
+Stammes~z.~B.: {\itquoted me duele su tentada flaqueza, desatentada lengua, y
+papeles hechos á tiento de pintor} etc.~und {\itquoted mire que es religioso, y debe
+ser sacrolego, pero no sacrilego}. Ich kann daher nicht an die Identität
+des Verfassers der {\it Venganza} mit dem Verfasser des falschen {\it Don Quijote}
+glauben.
+
+Somit müssen wir auch die Hypothese Menendez y~Pelayos, auf
+die er übrigens selbst nicht viel Gewicht legt, aufgeben.
+
+Einen Fortschritt in der Methode bedeutet die von Groussac\pfn{1}{\pxiini}
+gegebene Lösung der Verfasserfrage. Er stützt sich auf Beobachtungen
+sprachlicher Natur, die ihm dazu dienen sollen, nachzuweisen, dass
+Avellaneda und {\emph Juan Martí,} der Verfasser des falschen {\it Guzman}, ein und
+dieselbe Person sind. Die bereits von Pellicer angeführten Aragonismen
+und einige neue Beispiele gibt er als Valencianismen aus und sucht
+dafür Entsprechungen bei Juan Martí. Pellicer\pfn{2}{\pxiinii} bezeichnet folgende
+Ausdrücke als aragonesisch: {\itquoted Califica {\rm (Cervantes)} el lenguaje
+{\rm (de Avellaneda)} de aragonés, porque tal vez escribía sin articulos, y pudiera
+haber alegado otras pruebas no menos convincentes que copiosas como
+son: 1. en salir de la carcel, por en saliendo ó habiendo salido; 2. á la
+que volvió la cabeza, por habiendo vuelto la cabeza; 3. escupe y le
+pegaré, por le castigaré; 4. hincar carteles, por fixar ó pegar; 5. poner
+la escudilla en las brasas, por poner la taza sobre las asquas; 6. el señal,
+por la señal; 7. menudo, por mondongo; 8. mala gana, por congoja,
+desmayo ó vaguido, y 9.~aquel tratarse las personas de impersonál como
+\glq{}mire, oyga, perdone\grq.}
+
+Das von Cervantes angeführte Kriterium für den aragonesischen
+Ursprung kann nicht allzu schwer ins Gewicht fallen, wenn man die
+Fälle betrachtet, in denen Avellaneda den Artikel auslässt: {\itquoted ello es verdad
+que no todas (las) veces nos salían las aventuras como nosotros
+querían} \dots und {\itquoted con esto hacia toda (la) resistencia que podía para
+soltarse.} Im Katalanischen\pfn{3}{\pxiiniii} ebenso wie im älteren
+Spanisch kommt todo ohne Artikel vor: {\itquoted en todas guisas} {\it (Amadis)},
+{\itquoted porque en invierno
+\originalpage{13}
+no es menester fresco, y en verano no lo hay todas veces} (P.~de~Mejía,
+{\it Coloquio del porfiado\/}), {\itquoted no podian ejecutar las temas de sus locuras
+todas veces} (Quevedo, {\it Casa de locos de amor\/}). Eher als durch diesen
+Gebrauch wird Cervantes durch den Druckort Tarragona auf die Vermutung
+gekommen sein, dass der Verfasser Aragonese war.
+
+Von den sonst bei Pellicer angeführten Beispielen sind {\it escudilla,
+menudo, pegar, brasas} im Wörterbuch der Akademie als castilianisch
+verzeichnet. Die unpersönliche Anrede gehört nach Borao\pfn{1}{}
+der Mönchssprache an. Es bleibt also noch zu behandeln:
+
+1. {\it en} mit Inf.\ für {\it al} mit Inf. Ausser dem Beispiel Pellicers noch:
+{\itquoted y la primera cosa que hizo en despertar fué preguntar á Sancho por
+la reina Cenobia}~(86\sup{b}). Sonst finden wir stets {\it al} (5\sup{a}, 11\sup{b}, 22\sup{b},
+27\sup{b}, 82\sup{b} etc.). In dem falschen {\it Guzman} bemerken wir dasselbe
+Schwanken zwischen {\it en} und {\it al}. Morel-Fatio meint, dass die zwei Fälle
+{\it en} gegenüber den vielen Fällen {\it al} bei Avellaneda auf Rechnung des
+aragonesischen Druckers gesetzt werden könnten.
+
+2. {\it á la que \dots} ist allerdings eine Besonderheit, die ich sonst bei
+keinem Schriftsteller jener Zeit gefunden habe. Es steht elliptisch für
+{\it á la ora que.} Ob im Katalanischen etwas Ähnliches vorkommt, ist mir
+nicht bekannt. Das von Groussac angeführte Beispiel aus Juan Martí
+(364): {\itquoted á cuatro que le refieren} etc. gehört nicht hierher.
+
+3. {\it señal} als m.\ findet sich einmal bei Avellaneda und würde ein
+Katalanismus sein ({\it lo senyal\/})\pfn{2}{\pxiiinii}. Sonst sagt er: {\itquoted la señal acostumbrada}
+(60\sup{a}), {\itquoted me hize esta señal en el rostro} (69\sup{b}),
+{\itquoted con una señal de una
+espada de fuego \dots otra señal parda de color de acero} (26\sup{b}) etc.
+Nichts bei Juan Martí.
+
+4. {\it mala gana} \longeq Unwohlsein ist ein Katalanismus: einmal bei
+Avellaneda (97\sup{a}) und zweimal bei Juan Martí (373\sup{b} und 376\sup{b}).
+
+Das Verzeichnis Pellicers hat Groussac noch um einiges bereichert:
+{\it zorriar}, {\it buen recado} (bastante), {\it repostona}, {\it otorgar}
+(confesar), {\it aun} (así),
+{\it aunque} (puesto que), {\it hendo} (haciendo), {\it repapo}, {\it pedir de}
+(preguntar por), {\it partera} (parida).
+
+1. {\it zorriar} \longeq zurriar (der Wechsel von {\it o} und {\it u} ist nicht wesentlich)
+ist castilianisch und findet sich auch bei Quevedo. Ich habe es in
+keinem katalanischen Wörterbuch gefunden. Nicht bei Juan Martí.
+
+\originalpage{14}
+
+
 
 \end

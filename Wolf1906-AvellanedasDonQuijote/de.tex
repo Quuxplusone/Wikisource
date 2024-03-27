@@ -5,12 +5,16 @@
 \input plain-utf8.tex
 
 \def\english{\language0}
-\def\german{\language1}
-\def\french{\language2}
-\def\spanish{\language3}
+%\def\german{\language1}\german\input hyph-de-1901.tex
+%\def\french{\language2}\french\input hyph-fr.tex
+%\def\spanish{\language3}\spanish\input hyph-es.tex
+\def\german{\language1}\german\uselanguage{german}
+\def\french{\language2}\french\uselanguage{espanol}
+\def\spanish{\language3}\spanish\uselanguage{espanol}
 \def\latin{\spanish}
 \def\italian{\spanish}
 \def\catalan{\spanish}
+\german
 
 \font\tenrm=cmr10 \font\eightrm=cmr8 \font\sixrm=cmr6 \font\fiverm=cmr5
 \font\tenit=cmti10 \font\eightit=cmti8
@@ -51,7 +55,6 @@
 \def\originalpage#1{}
 \def\longeq{$=\joinrel=$}
 
-\german
 \input de-footnotes.tex
 \input de-main.tex
 \input de-biblio.tex

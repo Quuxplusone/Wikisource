@@ -2,19 +2,30 @@
 % https://books.google.com/books?id=8ipKAQAAMAAJ&pg=PA1
 % https://babel.hathitrust.org/cgi/pt?id=uc1.b2635535
 
-\input plain-utf8.tex
+\documentclass[12pt]{article}
 
-\def\english{\language0}
-%\def\german{\language1}\german\input hyph-de-1901.tex
-%\def\french{\language2}\french\input hyph-fr.tex
-%\def\spanish{\language3}\spanish\input hyph-es.tex
-\def\german{\language1}\german\uselanguage{german}
-\def\french{\language2}\french\uselanguage{espanol}
-\def\spanish{\language3}\spanish\uselanguage{espanol}
-\def\latin{\spanish}
-\def\italian{\spanish}
-\def\catalan{\spanish}
-\german
+\usepackage[utf8]{inputenc}
+
+\usepackage{geometry}
+\geometry{width=15cm,height=23.5cm,hmargin={1cm,3cm},vmargin={2cm,3cm}}
+
+\usepackage{librecaslon}
+
+
+\usepackage[english,ngerman,french,spanish,latin,italian,catalan,swedish]{babel}
+\def\english{\selectlanguage{english}}
+\def\german{\selectlanguage{ngerman}}
+\def\french{\selectlanguage{french}}
+\def\spanish{\selectlanguage{spanish}}
+\def\latin{\selectlanguage{latin}}
+\def\italian{\selectlanguage{italian}}
+\def\catalan{\selectlanguage{catalan}}
+\def\swedish{\selectlanguage{swedish}}
+
+\usepackage{hanging}
+\newlength{\myitemhang}
+
+\usepackage{multicol}
 
 \font\tenrm=cmr10 \font\eightrm=cmr8 \font\sixrm=cmr6 \font\fiverm=cmr5
 \font\tenit=cmti10 \font\eightit=cmti8
@@ -56,7 +67,13 @@
 \def\originalpage#1{}
 \def\longeq{$=\joinrel=$}
 
+\begin{document}
+\german
+\linespread{2}
+\spaceskip=0.4em plus 0.3em minus 0.1em
+\settowidth{\myitemhang}{1. }
+
 \input de-footnotes.tex
 \input de-main.tex
 \input de-biblio.tex
-\end
+\end{document}

@@ -103,11 +103,6 @@ nobr {
 .brace {
   width: 1em;
 }
-.brace_part1 {
-  border-right: 2px solid #000066;
-  border-top-right-radius: 12px;
-  height: 82px;
-}
 .brace_part2 {
   border-left: 2px solid #000066;
   border-bottom-left-radius: 12px;
@@ -120,20 +115,35 @@ nobr {
   margin-left: 1em;
   height: 8px;
 }
-.brace_part4 {
-  border-right: 2px solid #000066;
-  border-bottom-right-radius: 12px;
-  height: 82px;
-}
 .brace_part1a {
   border-right: 2px solid #000066;
   border-top-right-radius: 12px;
-  height: 12px;
+  height: 82px;
 }
 .brace_part4a {
   border-right: 2px solid #000066;
   border-bottom-right-radius: 12px;
+  height: 82px;
+}
+.brace_part1b {
+  border-right: 2px solid #000066;
+  border-top-right-radius: 12px;
   height: 12px;
+}
+.brace_part4b {
+  border-right: 2px solid #000066;
+  border-bottom-right-radius: 12px;
+  height: 12px;
+}
+.brace_part1c {
+  border-right: 2px solid #000066;
+  border-top-right-radius: 12px;
+  height: 82px;
+}
+.brace_part4c {
+  border-right: 2px solid #000066;
+  border-bottom-right-radius: 12px;
+  height: 82px;
 }
 </style>
 
@@ -176,22 +186,37 @@ and <a href="./clippings/the-american-maid.html">some newspaper clippings</a> on
 <hr width="20%" style="margin-top: 60px;"/>
 <center><h2>Dramatis Personæ</h2></center>
 
-<span class="sc">Jack Bartlett</span><br>
-<span class="sc">Stumpy</span><br>
-<span class="sc">Duke of Branford</span><br>
-<span class="sc">Mr. Silas Pompton</span><br>
-<span class="sc">Col. Vandeveer</span><br>
-<span class="sc unclear" title="Listed in p/v score, but has no lyrics">Lefty McCarty</span><br>
-<span class="sc unclear" title="Listed in p/v score, but has no lyrics">Hans Hippel</span><br>
-<span class="sc unclear" title="Listed in p/v score, but has no lyrics">Pietro Nuttini</span><br>
-<span class="sc">Count Hohenstaupellaufenwitz</span><br>
-<span class="sc">Countess Hohenstaupellaufenwitz</span><br>
+<span class="sc">Jack Bartlett</span>, <i>a playboy</i><br>
+<span class="sc">Stumpy</span>, <i>Jack Bartlett’s valet</i><br>
+<span class="sc">Duke of Branford</span>, <i>a wealthy Englishman</i><br>
+<span class="sc">Mr. Silas Pompton</span>, <i>a glassworks tycoon</i><br>
+<span class="sc">Col. Vandeveer</span>, <i>Annabelle’s father</i><br>
 <span class="sc">Gawkins</span>, <i>the Vandeveers’ butler</i><br>
-<span class="sc">John Smith</span><br>
-<span class="sc">James Smith</span><br>
-<span class="sc">Jerry Smith</span><br>
-<span class="sc">Annabelle Vandeveer</span><br>
-<span class="sc">Geraldine Pompton</span><br>
+<div>
+  <div style="display: inline-block; vertical-align: middle;">
+    <span class="sc">Count Hohenstaupellaufenwitz,</span><br>
+    <span class="sc">Countess Hohenstaupellaufenwitz,</span><br>
+    <span class="sc">John Smith,</span><br>
+    <span class="sc">James Smith,</span><br>
+    <span class="sc">Jerry Smith,</span><br>
+    <span class="sc unclear" title="Listed in p/v score, but has no lyrics">Lefty McCarty</span>,<br>
+    <span class="sc unclear" title="Listed in p/v score, but has no lyrics">Hans Hippel</span>,<br>
+    <span class="sc unclear" title="Listed in p/v score, but has no lyrics">Pietro Nuttini</span>,<br>
+  </div>
+  <div style="display: inline-block; vertical-align: middle;">
+    <div style="display: flex; flex-direction: column;">
+      <div class="brace brace_part1a"></div>
+      <div class="brace brace_part2"></div>
+      <div class="brace brace_part3"></div>
+      <div class="brace brace_part4a"></div>
+    </div>
+  </div>
+  <div style="display: inline-block; vertical-align: middle;">
+    <i>guests of the Vandeveers</i>
+  </div>
+</div>
+<span class="sc">Annabelle Vandeveer</span>, <i>a society girl</i><br>
+<span class="sc">Geraldine Pompton</span>, <i>a society girl</i><br>
 <span class="sc">Mrs. Vandeveer</span><br>
 <span class="sc">Mrs. Pompton</span><br>
 <div>
@@ -201,10 +226,10 @@ and <a href="./clippings/the-american-maid.html">some newspaper clippings</a> on
   </div>
   <div style="display: inline-block; vertical-align: middle;">
     <div style="display: flex; flex-direction: column;">
-      <div class="brace brace_part1a"></div>
+      <div class="brace brace_part1b"></div>
       <div class="brace brace_part2"></div>
       <div class="brace brace_part3"></div>
-      <div class="brace brace_part4a"></div>
+      <div class="brace brace_part4b"></div>
     </div>
   </div>
   <div style="display: inline-block; vertical-align: middle;">
@@ -217,18 +242,19 @@ and <a href="./clippings/the-american-maid.html">some newspaper clippings</a> on
   </div>
   <div style="display: inline-block; vertical-align: middle;">
     <div style="display: flex; flex-direction: column;">
-      <div class="brace brace_part1"></div>
+      <div class="brace brace_part1c"></div>
       <div class="brace brace_part2"></div>
       <div class="brace brace_part3"></div>
-      <div class="brace brace_part4"></div>
+      <div class="brace brace_part4c"></div>
     </div>
   </div>
   <div style="display: inline-block; vertical-align: middle;">
-    <i>the receiving party (six sopranos, two contraltos)</i>
+    <i>society friends of Annabelle’s (six sopranos, two contraltos)</i>
   </div>
 </div>
-<i>Chorus of Guests, Lackeys, Servants, and Glassblowers</i><br>
-<i>Chorus of Nurses and Cuban Girls</i>
+<i>Chorus of Guests and Servants</i><br>
+<i>Chorus of Glassblowers and Working Girls</i><br>
+<i>Chorus of Red Cross Nurses and Cuban Girls</i>
 
 <hr width="20%" style="margin-top: 60px;"/><br>
 <center><h2>Act I</h2></center>

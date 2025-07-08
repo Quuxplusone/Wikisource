@@ -1,36 +1,1801 @@
+<html>
+<head>
+<title>Chris and the Wonderful Lamp</title>
 
-<!--
+<style>
+div.spacious {
+  width: 65vw;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10em;
+  color: #000066 ! important;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  line-height: 1.5;
+}
+span.unclear {
+  background-color: #eeeeff;
+}
+p {
+  text-indent: 20px;
+}
+div.song {
+  padding: 0 0 0 10em;
+  position: relative;
+  font-size: 90%;
+}
+div.song p.who {
+  margin: 12px 0;
+  text-indent: 3em;
+  font-style: italic;
+}
+div.song p {
+  margin: 8px 0 0 0;
+  text-indent: 0;
+  white-space: pre-wrap;
+}
+span.left {
+  position: absolute;
+  top: auto;
+  left: 20px;
+  text-align: left;
+}
+div.counterpoint {
+  margin: 10px 0;
+  max-width: 700px;
+  font-size: 90%;
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+div.counterpoint > div {
+  width: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+div.counterpoint span.who {
+  margin: 0 3em;
+}
+span.sc {
+  font-style: normal;
+  font-variant-caps: small-caps;
+}
+span.sd {
+  font-style: normal;
+  font-variant-caps: small-caps;
+  text-transform: lowercase;
+}
+span.dr:after {
+  content: '\2002';
+}
+span.db:before {
+  content: '\2002';
+}
+span.db:after {
+  content: '\2002';
+}
+a {
+  color: inherit;
+  text-decoration:underline;
+  text-decoration-style: dotted;
+}
+nobr {
+  white-space: nowrap;
+}
+.brace {
+  width: 1em;
+}
+.brace_part1a {
+  border-right: 2px solid #000066;
+  border-top-right-radius: 12px;
+  height: 48px;
+}
+.brace_part1b {
+  border-right: 2px solid #000066;
+  border-top-right-radius: 12px;
+  height: 58px;
+}
+.brace_part2 {
+  border-left: 2px solid #000066;
+  border-bottom-left-radius: 12px;
+  margin-left: 1em;
+  height: 8px;
+}
+.brace_part3 {
+  border-left: 2px solid #000066;
+  border-top-left-radius: 12px;
+  margin-left: 1em;
+  height: 8px;
+}
+.brace_part4a {
+  border-right: 2px solid #000066;
+  border-bottom-right-radius: 12px;
+  height: 48px;
+}
+.brace_part4b {
+  border-right: 2px solid #000066;
+  border-bottom-right-radius: 12px;
+  height: 58px;
+}
+</style>
 
-The Library of Congress' Sousa collection, b7f14, contains autograph sheet music
-with lyrics for "Act II, opening chorus and dance", dated "JPS Nov 6 1899 NY".
-This song doesn't *seem* to be in the p/v score, but I haven't transcribed the
-p/v score yet, so I'm not 100% sure.
-b7f13 contains the same thing with the lyrics in block lettering, which is easier to read.
+</head>
+<body>
+<div class="spacious">
 
+<center>
+<p>This is Glen MacDonough and John Philip Sousa’s comic operetta <i>Chris and the Wonderful Lamp</i>,
+transcribed and edited by Arthur O’Dwyer (2025).
+<p>So far, this is just a transcription of
+<a href="https://books.google.com/books?id=-W09AQAAMAAJ&pg=PA1">the piano/vocal score</a>
+published 1899 by the John Church Company.
+I lack a (public-domain) source for the book, except for a small fragment of
+dialogue in Act I found in the Library of Congress’ Sousa collection (box 7).
 
+<p>The Library of Congress’ Sousa collection (box 7) contains unfinished drafts
+of many other songs that may have formed part of <i>Chris</i> at one time or
+another (or never). See the section of “<a href="#apocrypha">Apocrypha</a>”
+that comes after the operetta proper on this page.
+
+<p>Many small corrections, especially to punctuation, have been made quietly.
+Larger corrections, issues, and notes are marked in the text
+<span class="unclear" title="This is the mouseover text">like this</span>,
+with further details in the mouseover text.
+
+<p>The typographical presentation is inspired by
+<a href="https://archive.org/details/asimovsannotated00sull/"><i>Asimov’s Annotated
+Gilbert &amp; Sullivan</i></a> (1988).
+
+<p>See also <i>Chris</i>’s entry in Paul E. Bierley’s
+<a href="https://archive.org/details/worksofjohnphili00bier/page/23"><i>The Works of John Philip Sousa</i></a> (1984).
+</center>
+
+<br><br><hr><br>
+
+<center>
+<h2>Chris and the Wonderful Lamp</h2>
+
+<p>Book by Glen MacDonough
+<p>Lyrics by Glen MacDonough
+<p>Music by John Philip Sousa
+<p>First produced at the Hyperion Theatre in New Haven, Connecticut, on October 23, 1899
+</center>
+
+<hr width="20%"/><br>
+<center><h2>Dramatis Personæ</h2></center>
+
+<center><h3>In Act I</h3></center>
+
+<span class="sc">The Genie,</span> <i>the original Slave of the Lamp</i><br>
+<span class="sc">Chris Wagstaff,</span> <i>a “boy about town”</i><br>
+<span class="sc">Scotty Jones,</span> <i>boy-of-all-work at Miss Prisms’ Academy</i><br>
+<span class="sc">Lovemoney,</span> <i>a New England money-lender</i><br>
+<span class="sc">Pettingill</span><br>
+<span class="sc">The Auctioneer</span><br>
+<span class="sc">Fanny Wiggins,</span> <i>star pupil at Miss Prisms’ Academy</i><br>
+<span class="sc">Miss Prisms,</span> <i>principal of the Academy</i><br>
+<span class="sc unclear" title="Non-singing role">Katie Clancy,</span> <i>maid-of-all-work at the Academy</i><br>
+<div>
+  <div style="display: inline-block; vertical-align: middle;">
+    <span class="sc">Stella,<br>Della,<br>Bella,<br>Ella,<br>Nella,</span>
+  </div>
+  <div style="display: inline-block; vertical-align: middle;">
+    <div style="display: flex; flex-direction: column;">
+      <div class="brace brace_part1a"></div>
+      <div class="brace brace_part2"></div>
+      <div class="brace brace_part3"></div>
+      <div class="brace brace_part4a"></div>
+    </div>
+  </div>
+  <div style="display: inline-block; vertical-align: middle;">
+    <i>pupils at Miss Prisms’ Academy</i>
+  </div>
+</div>
+
+<center><h3>In Acts II and III</h3></center>
+
+<span class="sc">The Genie</span><br>
+<span class="sc">Chris Wagstaff</span><br>
+<span class="sc">Scotty Jones</span><br>
+<span class="sc">Aladdin,</span> <i>Prince of Etheria</i><br>
+<span class="sc">The Grand Vizier</span><br>
+<span class="sc">Al Khizar,</span> <i>Chief of the Secret Police of Etheria</i><br>
+<span class="sc">Captain of the Guard</span><br>
+<span class="sc">Fanny Wiggins</span><br>
+<span class="sc">Miss Prisms</span><br>
+<div>
+  <div style="display: inline-block; vertical-align: middle;">
+    <span class="sc">Amine,<br>Sofie,<br>Zobeide,<br>Diana,<br>Haydee,<br>Hebe,</span>
+  </div>
+  <div style="display: inline-block; vertical-align: middle;">
+    <div style="display: flex; flex-direction: column;">
+      <div class="brace brace_part1b"></div>
+      <div class="brace brace_part2"></div>
+      <div class="brace brace_part3"></div>
+      <div class="brace brace_part4b"></div>
+    </div>
+  </div>
+  <div style="display: inline-block; vertical-align: middle;">
+    <i>Talking Dolls</i>
+  </div>
+</div>
+<span class="sc">Queen of Dreams</span>
+
+<hr width="20%" style="margin-top: 60px;"/><br>
+<center><h2>Act I</h2></center>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<p>[<i>On stage: <span class="sc">Pettingill</span>, <span class="sc">Auctioneer</span>,
+and <span class="sc">Chorus</span>.</i>]
+
+<div class="song">
+<p class="who">Chorus
+<p> The Fourth of July has its meed of joy,
+ And Washington’s birthday our thoughts employ;
+ &emsp; But naught, not even a circus clown,
+ &emsp; Can waken the folks of this old town
+ &emsp; Like auction sales, for in that case,
+ &emsp; The sober-minded populace,
+ &emsp; Without regard to rank or race,
+ Finds pleasure without alloy.
+<p><span class="left sc">Men</span> Bargains! Bargains!
+<span class="left sc">Girls</span> &emsp; &emsp; Cloisonné and rarest crockery!
+<span class="left sc">Men</span> Bargains! Bargains!
+<span class="left sc">Girls</span> &emsp; &emsp; Roguish imps that laugh in mockery!
+<span class="left sc">All</span> &emsp; Silken goods and jewels antique;
+ &emsp; With statuettes that seemingly speak;
+ &emsp; Old guns and pistols, very unique;
+ Will all be sold off to-day.
+<p> We never bid high on the goods for sale;
+ Connecticut thriftiness must prevail.
+ &emsp; But when a bargain comes our way,
+ &emsp; Our “grab-it-quick” instincts we obey.
+ &emsp; We know a gold brick in the dark,
+ &emsp; Likewise a buzzard from a lark;
+ &emsp; Therefore we’re not an easy mark
+ For sharpers—they always fail.
+</div>
+
+<p>[<i>During the preceding, enter <span class="sc">Miss Prisms</span> and
+<span class="sc">Lovemoney<span>.</i>]
+
+<div class="song">
+<p class="who">Song—<span class="sc">Auctioneer</span>
+<p> &emsp; We’ll proceed without delay
+ To dispose of this rare collection;
+ &emsp; All antiquarians say
+ It will bear the closest inspection.
+ Purchasers spot cash must pay
+ Before the goods are moved away.
+ The first lot embraces
+ Roman scarves and laces;
+ Curios from Hindustan;
+ Golden idols from Japan;
+ Chinese swords from Singapore;
+ Silver pitcher from Lahore;
+ The catalogue names many more.
+<p> How much for this lot am I bid?
+<p><span class="left sc">Miss P.</span> Three.
+<p><span class="left sc">Pet.</span> Three-ten.
+<p><span class="left sc">Miss P.</span> Three-fifty.
+<p><span class="left"><span class="sc">Pet.</span> [<i>to <span class="sc">Miss P.</span></i>]</span> Don’t be rash.
+<p><span class="left sc">Miss P.</span> Three-fifty!
+<p><span class="left sc">Auc.</span> I hear no other bid.
+ Going! going! gone!
+ Hand over your cash.
+</div>
+
+<p><span class="dr"><span class="sc">Auc.</span> [<i>recit.</i>]</span>
+And now, this sealed casket—no one knows its contents. Visions of diamonds, rubies,
+sapphires, et cetera, float before me. How much am I bid?
+
+<div class="song">
+<p><span class="left"><span class="sc">Lov.</span> [<i>to <span class="sc">Miss P.</span></i>]</span> Says I to myself, says I,
+ “Those jimcracks don’t you buy,
+ &emsp; “But the casket get!”
+ &emsp; On that I’m set,
+ Though it comes darnation high.
+<p><span class="left"><span class="sc">Miss P.</span> [<i>to <span class="sc">Lovemoney</span></i>]</span>
+ Old Sypher used to say,
+ In a confidential way,
+ &emsp; “For the casket’s worth
+ &emsp; “No son of earth
+ “Is rich enough to pay.”
+<p><span class="left"><span class="sc">All</span> [<i>very softly</i>]</span> Therefore we all opine
+ That it must hold something fine—
+ &emsp; A diadem or priceless gem—
+ We wish we could divine.
+<p><span class="left sc">Auc.</span> Now, gentlemen, how much for the casket?
+<p><span class="left sc">Lov.</span> Three hundred dollars.
+<span class="left sc">Auc.</span> &emsp; &emsp; ’Tis shame to ask it!
+<p><span class="left sc">Pet.</span> Four hundred and fifty.
+<span class="left sc">Lov.</span> &emsp; &emsp; And fifty more!
+<span class="left sc">Chorus</span> And fifty more—he said fifty more!
+<span class="left sc">Auc.</span> Come, bid more quickly, I implore!
+<p><span class="left sc">Pet.</span> I’ll make it six.
+<span class="left sc">Lov.</span> &emsp; &emsp; I’ll raise you ten.
+<span class="left sc">Auc.</span> Do I hear ten more? Good, gentlemen!
+<p><span class="left sc">Pet.</span> I’ll bid ten more, and eighty on that;
+ <span class="unclear" title="The bidding has gone 300, 450, 500, 600, 610, 700, and will end at 800.">Which makes just seven</span>, and I’ll stand pat.
+<p><span class="left sc">Lov.</span> I’ll add an even hundred more.
+<span class="left sc">Pet.</span> I stand just where I stood before.
+<p><span class="left sc">Auc.</span> Come, urge them on!
+ One final chance! Going! going! gone!
+</div>
+
+<p>[<i><span class="sc">Lovemoney</span> takes the casket nervously. All surround him.
+He opens it, discovering an old and battered lamp. He is in a great rage.</i>]
+
+<p><span class="sc dr">Lov.</span>
+I’ve been robbed!
+
+<p>[<i>Exit <span class="sc">Auctioneer</span>.</i>]
+
+<div class="song">
+<p class="who">Chorus
+<p> Ha, ha, ha, ha, ha!
+<p> Old Sypher was fond of a joke,
+ And this is a post-mortem stroke!
+ &emsp; This lamp worthless and battered
+ Will only derision provoke.
+ It’s ever been thus since the world began;
+ No doubt it’s encompassed in Nature’s plan.
+ ’Tis foolish to buy a pig in a poke,
+ To crawl in a cannon to have a smoke,
+ To try to fight a young buzz-saw,
+ Or plead your case in a court of law.
+ Things may be fair in love or war
+ But not at an auction sale—
+ &emsp; Not at a sale—not at an auction sale!
+</div>
+
+<p>[<i>Enter <span class="sc">Chris</span>.</i>]
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p class="who">Song—<span class="sc">Chris</span>
+<p> When in curls and knickerbockers, quite a very little lad,
+ &emsp; To the late lamented Sypher I was sent.
+ Then his health, as I recall it, was phenomenally bad,
+ &emsp; And nearly were the sands of his existence spent.
+ He recuperated suddenly, and to me it was due
+ &emsp; That he hale and hearty died at eighty-three.
+ It was strong and constant exercise gave him his health anew
+ &emsp; For just three hours a day he spent in licking me.
+<p><span class="left sc">Chorus</span> And the recollection haunts him yet!
+<span class="left sc">Chris</span> &emsp; Great sentiment it lacks.
+<span class="left sc">Chorus</span> Though he vainly struggles to forget—
+<span class="left sc">Chris</span> &emsp; The rhythm of the whacks.
+<p> The patter, the patter, the patter of the shingle—
+ &emsp; To use it he well knew how.
+ He’d batter, he’d batter, he’d batter till I tingle;
+ &emsp; In mem’ry I feel it now.
+<p><span class="left sc">All</span> The patter, etc.
+<p><span class="left sc">Chris</span> When I first became a pupil at the dear old village school,
+ &emsp; In the little village schoolhouse on the green,
+ Then it stood within a leafy grove all shady, dark, and cool;
+ &emsp; But ere a year had passed that grove no more was seen.
+ It had disappeared completely, leaving not a single tree.
+ &emsp; By old Sypher they were felled and sent away
+ To be sliced up into shingles that were meant alone for me;
+ &emsp; A gross of them I often wore out in a day.
+<p><span class="left sc">Chorus</span> And the recollection, etc.
+</div>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<p>[<i><span class="unclear" title="From here to the song matches a one-page manuscript draft fragment in LC’s Sousa collection, box 7/2"><span class="sc">Chris</span> rubs the lamp.
+<span class="sc">The Genie</span> appears, in modern facial makeup,
+wearing clothes that might have been worn by the late Professor Sypher.</span></i>]
+
+<p><span class="sc dr">Genie</span>
+Did you rub?
+
+<p><span class="dr"><span class="sc">Chris</span> [<i>astounded</i>]</span>
+Rub—? Who the deuce are you?
+
+<p><span class="dr"><span class="sc">Genie</span> [<i>going to <span class="sc">Chris</span></i>]</span>
+One moment. Do you drink?
+
+<p><span class="sc dr">Chris</span>
+Yes.
+
+<p><span class="sc dr">Genie</span>
+Joy! Play cards?
+
+<p><span class="sc dr">Chris</span>
+Yes.
+
+<p><span class="sc dr">Genie</span>
+Rapture! Go to the races?
+
+<p><span class="sc dr">Chris</span>
+Yes.
+
+<p><span class="sc dr">Genie</span>
+More rapture! What times we’ll have together!
+
+<p><span class="sc dr">Chris</span>
+“We”?
+
+<p><span class="sc dr">Genie</span>
+I’m your man!
+
+<p><span class="sc dr">Chris</span>
+No, you’re not. I left him in New York.
+
+<p><span class="sc dr">Genie</span>
+I’m your servant, just the same. You hold Aladdin’s
+Lamp; and I’m the Genie, its humble slave!
+
+<p><span class="sc dr">Chris</span>
+The Arabian Nights, in Connecticut? Never!
+
+<p><span class="sc dr">Genie</span>
+Only too happy to convince you. Build you a palace while you wait?
+
+<p><span class="sc dr">Chris</span>
+A genie? Not much! A genie always appears in flaming robes, with a crash of thunder!
+
+<p><span class="sc dr">Genie</span>
+Old-fashioned. I haven’t done that sort of thing for fifty years.
+
+<p><span class="sc dr">Chris</span>
+Those clothes—
+
+<p><span class="sc dr">Genie</span>
+Out of Professor Sypher’s wardrobe. Don’t believe me yet? Ask for anything
+from an earthquake to a peck of emeralds, and you shall have it!
+
+<p><span class="dr"><span class="sc">Chris</span> <span class="unclear" title="On my own authority">[<i>indicating his empty wallet</i>]</span></span>
+Kindly restore <em>that</em> to health, will you?
+
+<p>[<i>Business with wallet.</i>]
+
+<p><span class="sc dr">Genie</span>
+When ordering, kindly rub the Lamp—and I’ll do the rest.
+
+<p><span class="sc dr">Chris</span>
+Tell me some more about yourself.
+
+<div class="song">
+<p class="who">Song—<span class="sc">Genie</span>
+<p> Great master, here am I, your willing slave,
+ &emsp; &emsp; &emsp; &emsp; who comes to serve you.
+ Don’t let my austere looks in the least unnerve you.
+ Oh, speak and tell me, pray,
+ Are you a prince or country jay,
+ Blue-blood or common clay?
+ &emsp; Elucidate on this point.
+<p> I am the slave of the lamp,
+ Though you be beggar or tramp,
+ A cutthroat, robber, or scamp,
+ &emsp; Your orders I must obey.
+<p> Yet I dote on respectability;
+ For rank and name I have a keen eye.
+ &emsp; Though Father was a myth,
+ &emsp; Dear Mother was a Smith,
+ And I am a high-toned Genie.
+<p><span class="left sc">Genie &amp; Chris</span> Yet (I dote/he dotes) on respectability;
+ For rank and name (I have/he has) a keen eye.
+ &emsp; (My/His) father was a myth,
+ &emsp; But (my/his) mother was a Smith,
+ And (I am/he is) a high-toned Genie!
+<p><span class="left sc">Genie</span> Aladdin was a master whom I served with unfeigned pleasure.
+ He was a lad in many respects a treasure.
+ Oh, how I loved the boy!
+ His orders were my constant joy.
+ Not once did he annoy
+ &emsp; By parvenu quips or quirks.
+<p> I am the slave of the lamp, etc.
+</div>
+
+<p><span class="unclear" title="LC 7/2: “Dialogue resumes as before at Chris’ line, “Where’s Aladdin”"><span class="sc dr">Chris</span>
+And where is Aladdin?</span>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p class="who">Song—<span class="sc">Senior Girls</span> (Sopranos)
+<p> &emsp; We seniors are,
+ &emsp; And always bar
+ The juniors from all social intercourse;
+ &emsp; We’ll condescend
+ &emsp; To slightly bend
+ To folks who have an intellectual force.
+ &emsp; We realize
+ &emsp; We are most wise;
+ Against the universe we stand to win.
+ &emsp; We have a touch
+ &emsp; Of early Dutch,
+ With English, Irish, Scotch, and French mixed in;
+ &emsp; Therefore, you see,
+ &emsp; Mentality
+ Developed to a high degree.
+<p> Oh, happy days of maiden dreaming,
+ &emsp; With sunlight streaming
+ &emsp; &emsp; Through halls of splendor!
+ Our hearts with joyfulness are teeming,
+ &emsp; For in the seeming
+ &emsp; &emsp; All is tender;
+ &emsp; &emsp; And all is love.
+</div>
+
+<div class="song">
+<p class="who">Song—<span class="sc">Junior Girls</span> (Altos)
+<p> &emsp; We maids are thought
+ &emsp; To rank as nought
+ If what the seniors say is gospel truth.
+ &emsp; At present we
+ &emsp; On this agree:
+ We have the disadvantages of youth.
+ &emsp; We’ll live that down;
+ &emsp; A senior’s crown
+ Will be our prize within a year or two.
+ &emsp; Though now we fret
+ &emsp; We’ll not forget,
+ When we get there, to do as seniors do.
+ &emsp; We trust you see
+ &emsp; Mentality
+ Developed to a high degree.
+<p> Oh, happy days of maiden dreaming, etc.
+</div>
+
+<div class="song">
+<p><span class="left sc">Miss P.</span> Young ladies, on this most auspicious day—
+<span class="left sc">Girls</span> &emsp; &emsp; Yes, madam!
+<span class="left sc">Miss P.</span> I trust my daily teaching you’ll obey.
+<span class="left sc">Girls</span> &emsp; &emsp; Yes, madam!
+<span class="left sc">Miss P.</span> Don’t giggle when the deacon tries to speak—
+<span class="left sc">Girls</span> &emsp; &emsp; No, madam!
+<span class="left sc">Miss P.</span> Or say the parson’s daughter is a freak—
+<span class="left sc">Girls</span> &emsp; &emsp; No, madam!
+<span class="left sc">Miss P.</span> And you must never wink, or twirl your thumb—
+<span class="left sc">Girls</span> &emsp; &emsp; No, madam!
+<span class="left sc">Miss P.</span> Or fill your mouth with nasty chewing gum.
+<span class="left sc">Girls</span> &emsp; &emsp; No, madam!
+<p><span class="left sc">Miss P.</span> And do not poke each other in the ribs,
+ Or when you talk of me, don’t say “her ancient nibs,”
+ Because I’m very sure to find you out.
+<span class="left"><span class="sc">Girls</span> [<i>spoken</i>]</span> &emsp; &emsp; No, madam!
+</div>
+
+<p>[<i>Enter <span class="sc">Fanny Wiggins</span>.</i>]
+
+<div class="song">
+<p class="who">Song—<span class="sc">Fanny</span>
+<p><span class="left sc">Fanny</span> The bobolink is chirping forth his chee, chee, chee, chee—
+ &emsp; Loud is his voice.
+ His mate is sending tokens sweet of chee, chee, chee, chee—
+ &emsp; He is her choice.
+ All nature is a-bloom today; ’tis spring;
+ Respite from work the coming days will bring;
+ And then with song we’ll make the woodland ring.
+ &emsp; All nature is a-bloom today; ’tis spring;
+ &emsp; All nature is a-bloom; ’tis spring! ’tis spring! ’tis spring!
+<p> Oh, happy days of maiden dreaming, etc.
+</div>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p><span class="left sc">Genie</span> Professor <span class="unclear" title="P/v page 60 has “Gilder”; page 65 has “Wilder”">Gilder</span> is my name,
+ And simply boundless is my fame.
+<span class="left sc">Chris</span> &emsp; And I claim the same!
+<p><span class="left sc">Girls</span> You ne’er again need hope to scan
+ The features of so great a man.
+<span class="left sc">Chris</span> &emsp; So gaze while you can!
+<span class="left">[<i>indicating himself</i>]</span>
+<p><span class="left sc">Girls</span> To realize the brains that lie
+ Beneath a forehead broad and high—
+<span class="left sc">Chris</span> &emsp; Pray, cast <em>here</em> an eye!
+<p><span class="left sc">Girls</span> Of all the varied -ologies
+ Of ’varsities and colleges
+ More than profound their knowledge is;
+ &emsp; In fact, they know it all!
+</div>
+
+<div class="song">
+<p class="who">Song—<span class="sc">Genie</span>, <span class="sc">Chris</span>, and <span class="sc">Girls</span>
+<p><span class="left sc">Chris</span> Oh, I am an L. L. D.—
+<span class="left sc">Genie</span> &emsp; And I am an I. O. U.—
+<span class="left sc">Chris</span> For both of us took a high degree
+ &emsp; At the College of Hoop-de-Doo!
+<p><span class="left sc">Genie</span> Oh, I am an X. Y. Z.—
+<span class="left sc">Chris</span> &emsp; I never knew that of you!
+<span class="left sc">Both</span> (I’m/He’s) an O. K. and a C. O. D.,
+ &emsp; As well as a P. D. Q.!
+<p><span class="left sc">Girls</span> For he is an L. L. D.—
+<span class="left sc">Chris &amp; Genie</span> &emsp; &emsp; (I am!/He is!)
+<span class="left sc">Girls</span> &emsp; And he is an I. O. U.—
+<span class="left sc">Chris &amp; Genie</span> &emsp; &emsp; (He is!/I am!)
+<span class="left sc">Girls</span> For both of them took a high degree
+ &emsp; At the College of Hoop-de-Doo! <!--
+<span class="left sc">Chris &amp; Genie</span> &emsp; &emsp; Doo! Doo! -->
+<p><span class="left sc">Girls</span> Oh, he is an X. Y. Z.—
+<span class="left sc">Chris &amp; Genie</span> &emsp; &emsp; (He is!/I am!)
+<span class="left sc">Girls</span> &emsp; We never knew that of you—
+<span class="left sc">Chris &amp; Genie</span> &emsp; &emsp; <span class="unclear" title="Thus in p/v, despite its lack of sense">(I am!/He is!)</span>
+<span class="left sc">All</span> (I’m/He’s) an O. K. and a C. O. D.,
+ &emsp; As well as a P. D. Q.
+</div>
+
+<div class="song">
+<p><span class="left sc">Chris</span> In ev’ry climate, land, or zone,
+ Professor <span class="unclear" title="see “Gilder” above">Gilder</span> is well known.
+<span class="left sc">Genie</span> &emsp; I don’t like your tone.
+<p><span class="left sc">Chris</span> And when it comes to foreheads wide,
+<span class="left">[<i>indicating his own</i>]</span> You will admit this can’t be tied.
+<span class="left sc">Genie</span> &emsp; Look <em>here</em> and decide!
+<p><span class="left sc">Chris</span> My partner, there, too jealous is;
+ You all may read it in his phiz.
+<span class="left sc">Genie</span> &emsp; But he knows his biz.
+<p><span class="left sc">Girls</span> Of all the varied -ologies
+ Of ’varsities and colleges
+ More than profound their knowledge is;
+ &emsp; In fact, they know it all!
+</div>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p class="who">Duet—<span class="sc">Fanny</span> and <span class="sc">Chris</span>
+<p><span class="left sc">Chris</span> La la la la la la la—
+<p><span class="left sc">Altos</span> Do la sol sol fa;
+ Si si la do;
+ La da do si si;
+ La sol fa fa mi.
+ La sol sol fa;
+ Si si la do;
+ La fa mi;
+ Mi mi re;
+ Do la si la sol do do fa.
+<div class="counterpoint" style="margin-left: -4em;">
+<div><span class="who sc">Sopranos</span>
+<p> Do do do do do!
+ Do fa la do do
+ Re do si do si sol
+ Mi sol do do
+ Re do si do la fa
+ Fa si re re
+ Fa si re re
+ Do fa mi fa mi re do.
+ Fa mi re mi fa sol la
+ Sol re do
+ Mi re mi fa sol la sol re do
+ Fa mi re do si do
+ Re sol do do re mi fa
+ Sol la si do si sol
+ Fa la do do
+ Re do si do si sol
+ Mi sol do do
+ Re do si do la <span class="unclear" title="p/v has “la”">fa</span>
+ Fa si re re
+ Fa si re re
+ Do fa mi fa mi re
+ Do si do re mi fa
+ Sol fa mi fa mi re do re
+ Do si la sol fa mi re mi fa sol la
+ La sol re si la do re mi
+ Fa la do fa do la fa.
+</div>
+<div><span class="who sc">Altos</span>
+<p>
+ La—
+ Sol—
+ Sol—
+ Fa—
+ Si—
+ Si—
+ La do.
+ La fa do—
+ Si—
+ Si—
+ La—
+ So fa fa—
+ Mi—
+ La—
+ La—
+ Sol—
+ Fa—
+ Si—
+ Si—
+ La do.
+ <span class="unclear" title="p/v omits this lyric">Do</span> la <span class="unclear" title="p/v has “la”">fa</span> mi—
+ Mi mi re—
+ Do la si la sol do—
+ Fa.
+</div>
+</div><!-- counterpoint -->
+<p><span class="left sc">Chris</span> Very good! Keep it up!
+<div class="counterpoint" style="margin-left: -4em;">
+<div><span class="who sc">Sopranos</span>
+<p> Do fa la do do
+ Re do si do si sol
+ Fa la do do
+ Re do si do si sol.
+</div>
+<div><span class="who sc">Altos</span>
+<p> Do la—
+ Sol—
+ La—
+ Sol.
+</div>
+</div><!-- counterpoint -->
+<p><span class="left sc">Chris</span> My hope to wander through it most absorbing and intense is:
+ That land of High-Art Posters that we see upon the fences.
+ &emsp; To that far land could we but fly,
+ &emsp; We’d happy be, there, you and I,
+ For living in that blessed spot a moderate expense is.
+ Therefore, I beg, take heart and slip the stern parental tether;
+ We’ll wedded be and then depart for Posterland together.
+ &emsp; With cloudless hearts we e’er may stray
+ &emsp; Through many colored meadows gay,
+ With ecru trees that always bloom in lemon-colored weather.
+<p><span class="left sc">Fanny</span> Ah, me!
+<span class="left sc">Chris</span> &emsp; Ah, me!
+<span class="left sc">Sopranos</span> &emsp; &emsp; Ah, me!
+<span class="left sc">Altos</span> &emsp; &emsp; &emsp; Ah, me!
+<span class="left sc">All</span> &emsp; &emsp; &emsp; &emsp; Ah, me!
+<p><span class="left sc">Chris &amp; Fanny</span> In Posterland! in Posterland!
+ &emsp; Where skies are always red;
+ Where orange lambkins skip about
+ &emsp; Without a tail or head.
+<span class="left sc">All</span> Where trees like purple sponges look,
+ &emsp; Where grass is always pink;
+ We’d walk beside a light green brook
+ &emsp; While peach-blow thoughts we’d think.
+<p><span class="left sc">Chris</span> Very good! Keep it up!
+<div class="counterpoint" style="margin-left: -4em;">
+<div><span class="who sc">Sopranos</span>
+<p> Do fa la do do
+ Re do si do si sol
+ Fa la do do
+ Re do si do si sol.
+</div>
+<div><span class="who sc">Altos</span>
+<p> Do la—
+ Sol—
+ La—
+ Sol.
+</div>
+</div><!-- counterpoint -->
+<p><span class="left sc">Fanny</span> The home of highly colored hopes and rainbow-hued extenses,
+ That land of High-Art Posters that we see upon the fences!
+ &emsp; How fortunate indeed our fate
+ &emsp; Could we that mystic strand locate
+ For to discover it a task imposing and immense is.
+ Vermilion cows are to this land exclusively allotted;
+ The cats are all two-legged there, the dogs are polka-dotted.
+ &emsp; The natives are the strangest crew
+ &emsp; That ever pen or pencil drew;
+ The horses are the queerest things that ever walked or trotted.
+<p> Ah, me!, etc.
+</div>
+
+<p>[<i>Exit <span class="sc">Chorus</span>.</i>]
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p class="who">Finale—Act I
+<p><span class="left sc">All</span> Though we brag about our horses
+ &emsp; Or our speedy automobile,
+ Praise our trotter’s great resources
+ &emsp; And our <a href="https://en.wikipedia.org/wiki/Chain_drive#Automobiles">chain-</a> or <a href="https://en.wikipedia.org/wiki/Drive_shaft">chainless</a> <a href="https://archive.org/details/sim_jama_1909-03-06_52_10_0/page/820">low wheel</a>,
+ We discover—though we’re bumptious,
+ &emsp; Careless, or particular—
+ That there is nothing quite so scrumptious
+ &emsp; As a Pullman Palace Car.
+<p> On, iron horse! we praise you;
+ Let’s hope steep inclines won’t daze you;
+ The speed, no doubt, will amaze you.
+ &emsp; You’re smashing all the records
+ &emsp; &emsp; that were never smashed before.
+</div>
+
+<p><span class="dr"><span class="sc">Genie</span> [<i>at door</i>]</span>
+San Francisco!
+All aboard for Etheria!
+
+<p>[<i><span class="unclear" title="On my own authority">During these eight bars of music,
+it seems that the principals depart via cross-country train, arrive San Francisco, board a ship,
+and prepare to sail off for Etheria.</span></i>]
+
+<p><span class="dr"><span class="sc">Genie</span> [<i>behind scenes</i>]</span>
+Weigh anchor!
+
+<p>[<i><span class="unclear" title="A sensible production would absolutely have stopped at this point, but p/v keeps going.">Re-enter
+<span class="sc">Genie</span>.</i>]
+
+<div class="song">
+<p class="who">Song—<span class="sc">Genie</span>
+<p> &emsp; A humpback whale
+ &emsp; Despised his tail—
+ A peacock’s craved, with its gaudy hue.
+ &emsp; “If it were mine,
+ &emsp; “I’d leave this brine
+ “And fly aloft to heaven’s blue!”
+ &emsp; By vain thoughts spurred,
+ &emsp; He coaxed the bird
+ To swim far out beyond the breakers’ roar;
+ &emsp; And when he dipped,
+ &emsp; The whale he snipped
+ The peacock’s tail with a cross-cut saw.
+ And then he stuck the feathers on his own extremitee,
+ But somehow couldn’t manage to fly up above the sea!
+<p> Oh, blow, ye winds, and likewise pipe your eye
+ For the humpback whale who tried to fly.
+ &emsp; His tail arose,
+ &emsp; But he couldn’t lift his nose,
+ And he never knew the reason why.
+<p><span class="left sc">All</span> Blow, ye winds, etc.
+<p><span class="left sc">Genie</span> &emsp; A skipper grim
+ &emsp; Caught sight of him
+ A-flound’ring madly in the briny deep.
+ &emsp; Says he, ”By gum,
+ &emsp; “I’ll give up rum
+ “If that ’ere thing don’t make me creep!
+ &emsp; “But my harpoon
+ &emsp; “Will no doubt soon
+ “Explore his innards to that mark’d degree
+ &emsp; “That he will know
+ &emsp; “He’s not the show:
+ “No whale can shake his tail at me!”
+ And his flippers are a-churning in a crazy sort of way
+ While his feathered tail is bobbing up above the ocean’s spray!
+<p> Oh, blow, ye winds, etc.
+</div>
+
+<p>[<i>Exit <span class="sc">Genie</span>. Enter <span class="sc">Fanny</span> and
+<span class="sc">Chris</span>.</i>]
+
+<div class="song">
+<p class="who">Recitative
+<p><span class="left sc">Chris</span> Are you a good sailor, and for the ocean have no fear;
+ Or subject to that horrid thing the French call <i>mal de mer?</i>
+<p><span class="left sc">Fanny</span> I never seek my cabin though the boat bob like a cork;
+ And I’ve traveled on the Hudson from Poughkeepsie to New York.
+</div>
+
+<p>[<i>They promenade.</i>]
+
+<div class="song">
+<p><span class="left sc">Chris</span> How lovely! The day’s attuned to love:
+ The sea below, the sky above.
+<p><span class="left sc">Fanny</span> Sweetly, sweetly, the warm western breezes are sighing!
+ Swiftly, swiftly, o’er silvery waves we are flying;
+ Yet somehow, somehow, a queerness that feels terrifying
+ Is stealing upon me—
+ &emsp; &emsp; Ah, would I were home again!
+<p><span class="left sc">Both</span> Blast the billowy ocean
+ When it starts to get in a commotion.
+ Give, ah, give me a potion
+ &emsp; To put me to sleep till I land!
+</div>
+
+<p>[<i>The <span class="sc">Chorus</span>, off, imitates the sound of wind.</i>
+
+<p>[<i>Enter <span class="sc">Genie</span>.</i>]
+
+<div class="song">
+<p><span class="left sc">Genie</span> If she springs a leak on the larboard,
+ Go over and sit on the starboard.
+ If she springs a leak on the starboard,
+ Go over and sit on the larboard.
+</div>
+
+<p>[<i>The storm increases. Lightning and thunder.</i>]
+
+<div class="song">
+<p><span class="left sc">All</span> Howling! The bleak western breezes are howling!
+ Darkly, darkly, the black sky above us is scowling.
+ Somehow, somehow, an unrestrained feeling for growling
+ Is stealing upon us—
+ &emsp; &emsp; Oh, would we were home again!
+</div>
+
+<div class="song">
+<p><span class="left sc">Genie</span> Land ahead!
+<span class="left sc">All</span> &emsp; &emsp; Land ahead!
+<p><span class="left sc">Genie</span> But two leagues sou’-sou’west.
+ Tonight with Prince Aladdin we will rest.
+<span class="left">[<i>To <span class="sc">Chris</span></i>]</span> Great Master, very soon we’ll be within the land of fairies;
+ Be dignified and drop all small vagaries.
+ I’ve telephoned to-day
+ And told the Queen of Dreams to say
+ That we are on our way
+ &emsp; To visit Aladdin’s court.
+<p><span class="left sc">All</span> Oh, wondrous slave of the lamp!
+<span class="left sc">Genie</span> &emsp; Thanks for the praise you convey.
+<span class="left sc">All</span> Though he be loafer or scamp—
+<span class="left sc">Genie</span> &emsp; His orders I must obey.
+ Yet I dote on respectability;
+ For rank and name I have a keen eye;
+ &emsp; Though Father was a myth,
+ &emsp; Dear Mother was a Smith,
+ And I am a high-toned Genie.
+<p><span class="left sc">All</span> Yet he dotes, etc.
+<p> He has a very keen eye,
+ A bright and cheery keen eye.
+ He is a high-toned Genie
+ With nothing of a mean eye;
+ A Genie with a keen eye.
+ Not a mean eye, but a keen eye,
+ &emsp; Has this great Genie!
+</div>
+
+<p style="margin-top: 60px;"><center><span class="sc">End of Act I</span></center>
+
+<hr width="20%"/><br>
+<center><h2>Act II</h2></center>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p class="who">Recitative—<span class="sc">Queen of Dreams</span>
+<p> Awake, Aladdin! for now breaks the spell!
+ Two thousand years have vanished since it fell.
+ Awake, Aladdin! mount your throne again!
+ For mortal feet are treading your domain.
+</div>
+
+<p>[<i>Exit <span class="sc">Queen of Dreams</span>.</i>
+
+<p>[<i><span class="sc">Aladdin</span> wakes, followed shortly by his
+<span class="sc">Vizier</span> and <span class="sc">Captain of the Guard</span>,
+and then by his <span class="sc">Chorus of Court Musicians</span>.</i>]
+
+<div class="song">
+<p><span class="left sc">Al.</span> Oh, pardon me—I’ve been asleep, methinks.
+<p><span class="left sc">Viz.</span> Your Majesty has taken forty winks.
+<p><span class="left"><span class="sc">Al.</span> [<i>to <span class="sc">Chorus</span></i>]</span> So soft your song that I in slumber strayed;
+ Therefore, I beg, resume your serenade.
+</div>
+
+<div class="song">
+<p class="who">Song—<span class="sc">Aladdin</span> and <span class="sc">Chorus</span>
+<p><span class="left sc">Chorus</span> Above the slim minaret
+ &emsp; Two stars of twilight glow.
+ The lute and bright castanet
+ &emsp; Sound in the dusk below.
+<p><span class="left sc">Al.</span> <a href="https://en.wikipedia.org/wiki/The_Corsair">Gulnare</a>, look from thy lattice!
+<span class="left sc">Chorus</span> &emsp; Gulnare, look from thy lattice.
+<span class="left sc">Al.</span> Gulnare— Gulnare—
+<span class="left sc">Viz. &amp; Capt.</span> &emsp; &emsp; Gulnare!
+<p><span class="left sc">Al.</span> Though loud the call for prayer—
+ &emsp; Hear the muezzin’s cry—
+ Far from the mosque I fare;
+ &emsp; Swift to my love I fly.
+ What need of mosque have I?
+ &emsp; Here is a fairer shrine,
+ Each prayer a tender sigh;
+ &emsp; Turn not thine ear from mine.
+<p><span class="left sc">Al. &amp; Tenors</span> Gulnare, stars of twilight glow;
+ We are waiting here below.
+ Gulnare, here is a fairer shrine;
+<span class="left sc">Al.</span> Turn not thine eyes from mine,
+ &emsp; &emsp; Gulnare!
+<p><span class="left sc">Al. &amp; Tenors</span> Now through the nearing night
+ &emsp; Four stars in glory rise;
+ Two the pale heavens light;
+ &emsp; Two are thy shining eyes.
+ &emsp; &emsp; Gulnare!
+</div>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p class="who">Song—<span class="sc">Genie</span>, <span class="sc">Scotty</span>, and <span class="sc">Talking Dolls</span>
+<p><span class="left sc">Dolls</span> “Mama, Papa,” was all that we could say,
+ Until we met this naughty boy, this sporty boy, today.
+ Now all because of this alluring lad
+ We’re dollishly improper and mechanically bad!
+<p> Very goody-goody dollies once were we;
+ Now we’re dissipated dollies, as you see.
+ Propriety and etiquette are laid upon the shelf;
+ We say “Come off” and “Quit it,” “Get a gait” and “Chase yourself!”
+ Nor do we hesitate a bit
+ In negatives to use a “nit.”
+ &emsp; In sporty chatter
+ &emsp; We merrily patter
+ Though it is impolite.
+ &emsp; Ourselves we flatter,
+ &emsp; Concerning that matter,
+ That we are “out of sight!”
+<p><span class="left sc">Genie &amp; Sco.</span> <span class="unclear" title="P/v has “Ah there”">Hey there</span>—
+<span class="left sc">Dolls</span> &emsp; &emsp; You bet!
+<span class="left sc">Genie &amp; Sco.</span> Stay there—
+<span class="left sc">Dolls</span> &emsp; &emsp; Don’t fret.
+ A hit we’re bound to make;
+ We are the swiftest of the swift, and ev’ry cake we take.
+<p> To that—
+<span class="left sc">Sco.</span> &emsp; &emsp; What <span class="unclear" title="Thus in p/v; I believe this is a contraction of “What the hell”">t’ell</span>—
+<span class="left sc">Dolls</span> —young man—
+<span class="left sc">Sco.</span> &emsp; &emsp; Well, well—
+<span class="left sc">Dolls</span> The whole of this we owe.
+ We wish that we had met him some ten thousand years ago.
+<p> Very goody-goody dollies, etc.
+</div>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p class="who">Trio—<span class="sc">Fanny</span>, <span class="sc">Aladdin</span>, and <span class="sc">Chris</span>
+<p><span class="left sc">Chris</span> &emsp; What maid could read amiss
+ &emsp; An attitude like this,
+ Or reward such deep devotion with the mitten?
+<span class="left sc">Fanny</span> &emsp; While any damsel knows
+ &emsp; A person in this pose
+ By the beauty of her charms is deeply smitten.
+<span class="left sc">Al.</span> &emsp; Do you think I can convey
+ &emsp; By standing in this way
+ That the idol of my heart beyond my reach is?
+<span class="left"><span class="sc">Fanny</span> [<i>critically</i>]</span> &emsp; Oh, yes, that’s rather good.
+<span class="left sc">Chris</span> &emsp; It would be understood
+ Slightly better than a string of soulful speeches.
+<span class="left sc">Al.</span> &emsp; Soulful speeches—
+<span class="left sc">Fanny</span> &emsp; &emsp; Soulful speeches—
+<span class="left sc">Chris</span> —Than a string of soulful speeches!
+<p><span class="left sc">All</span> &emsp; Ah! Sweetest of all of the words of love
+ &emsp; &emsp; Are the words that are unsaid;
+ &emsp; Truest of all of the vows of love
+ &emsp; &emsp; Are the vows by glances sped.
+ &emsp; Little the need for speech to voice
+ &emsp; &emsp; A passion deep or grand;
+ &emsp; Tell her your story with your eyes
+ &emsp; &emsp; And she will understand.
+<p><span class="left sc">Chris</span> &emsp; The girl who knows her book
+ &emsp; Could won be by a look
+ If ’twere given with this eloquent expression.
+<span class="left sc">Fanny</span> &emsp; You’ll find this type of gaze
+ &emsp; Will tender tumults raise
+ ’Mid the heart-strings of a damsel of discretion.
+<span class="left sc">Al.</span> &emsp; Very well, then I shall try
+ &emsp; The telepathic eye
+ And look my infatuation in this fashion.
+<span class="left"><span class="sc">Fanny</span> [<i>critically</i>]</span> &emsp; Not bad; in fact, quite fair.
+<span class="left sc">Chris</span> &emsp; It’s certain with that stare.
+ You could move a wooden image to compassion.
+<span class="left sc">Al.</span> &emsp; To compassion—
+<span class="left sc">Fanny</span> &emsp; &emsp; To compassion—
+<span class="left sc">Chris</span> —Wooden image to compassion!
+<p><span class="left sc">All</span> &emsp; Ah! Sweetest of all, etc.
+</div>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p><span class="left sc">Chris</span> The lamp!
+<span class="left sc">Al.</span> &emsp; The lamp!
+<span class="left sc">Chris</span> The lamp!
+<span class="left sc">Al.</span> &emsp; The lamp!
+<span class="left sc">Fanny</span> &emsp; &emsp; The lamp!
+<span class="left sc">Chorus</span> Well, what about the lamp?
+<p><span class="left sc">Fanny</span> &emsp; &emsp; The lamp!
+<span class="left sc">Al.</span> &emsp; The lamp!
+<span class="left sc">Chris</span> It’s gone!
+<span class="left sc">Al.</span> &emsp; It’s gone!
+<span class="left sc">Chris</span> It’s gone!
+<span class="left sc">Al.</span> &emsp; It’s gone!
+<span class="left sc">Fanny</span> &emsp; &emsp; It’s gone!
+<span class="left sc">Chorus</span> They say the lamp is gone.
+<p><span class="left sc">Fanny</span> &emsp; &emsp; It’s gone!
+<span class="left sc">Al.</span> &emsp; Yes, gone!
+<p><span class="left sc">Genie</span> One moment; one moment; one moment.
+<p> I met a girl who said, “Propriety and etiquette are laid upon the shelf.”
+ She said “Come off” and “Quit it,” “Get a gait” and “Chase yourself”;
+ Nor did she hesitate a bit
+ In negatives to use a “nit”;
+ &emsp; In sporty chatter
+ &emsp; She’d merrily patter
+ In language impolite.
+ &emsp; From too much boozing
+ &emsp; I dropped into snoozing
+ And the lamp got out of sight.
+</div>
+
+<p>[<i><span class="sc">Miss Prisms</span> and the <span class="sc">Vizier</span> look in from
+offstage.</i>]
+
+<div class="song">
+<p><span class="left sc">Miss P. &amp; Viz.</span> &emsp; &emsp; ’Tis found!
+<span class="left sc">Chorus</span> ’Tis found!
+<span class="left sc">Chris</span> The lamp!
+<span class="left sc">Al.</span> &emsp; The lamp!
+<span class="left sc">Chris</span> The lamp!
+<span class="left sc">Al.</span> &emsp; The lamp!
+<span class="left sc">Fanny</span> &emsp; &emsp; The lamp!
+<span class="left sc">Chorus</span> Well, what about the lamp?
+<p><span class="left sc">Fanny</span> &emsp; &emsp; It’s found!
+<span class="left sc">Al.</span> &emsp; It’s found!
+<span class="left sc">Chris</span> —They say!
+<span class="left sc">Al.</span> &emsp; —They say!
+<span class="left sc">Chris</span> —They say!
+<span class="left sc">Al.</span> &emsp; —They say!
+<span class="left sc">Fanny</span> &emsp; &emsp; —They say!
+<span class="left sc">Chorus</span> We say the lamp is found!
+<p><span class="left sc">Fanny</span> &emsp; &emsp; Hooray!
+<span class="left sc">Al. &amp; Chris</span> &emsp; Hooray!
+<p><span class="left sc">Genie</span> One moment; one moment; one moment.
+ I <em>know</em> it was that girl!
+</div>
+
+<p>[<i>Enter <span class="sc">Miss Prisms</span>, <span class="sc">Scotty</span>,
+<span class="sc">Vizier</span>, the <span class="sc">Captain of the Guard</span>, and
+<span class="sc">Chorus</span>, bringing the sleeping <span class="sc">Dolls</span>.
+<span class="sc">Amine</span>, asleep, is tightly clutching the lamp.</i>]
+
+<div class="song">
+<p><span class="left sc">Fanny, Chris,</span> They are fast asleep.
+<span class="left sc">Al., &amp; Genie</span>
+</div>
+
+<p>[<i><span class="sc">Chris</span> and the <span class="sc">Genie</span>
+unsuccessfully attempt to awaken them.</i>]
+
+<div class="song">
+<p><span class="left sc">All</span> Awake, sleepers! Hear us call thee to rise.
+ Awake, sleepers! Let us gaze on thine eyes.
+ Ope thine eyes, fair sleepers, ope thine eyes.
+<p><span class="left sc">Fanny, Al. &amp; Chris</span> No guardian of the peace can with thee trot
+ &emsp; Nor match thee in a dozing bee;
+ The seven sleepers were a wakeful lot,
+ &emsp; And not to be compared at all to thee.
+ Great sleepers—
+<span class="left sc">All</span> &emsp; &emsp; Sleepers, awake!
+</div>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p class="who">Song—<span class="sc">Genie</span>
+<p> A patient egg had waited long
+ &emsp; To bloom into a chicken,
+ Until its feelings grew so strong
+ &emsp; Its plot began to thicken.
+ And soon to it the fact was plain—
+ &emsp; Which dropped its pride a peg—
+ It was most undeniably
+ &emsp; A failure as an egg.
+<p><span class="left sc">Chorus</span> Did it despair?
+<span class="left sc">Genie</span> &emsp; &emsp; &emsp; &emsp; Oh, no, no, no!
+ &emsp; It said, “Despite my age
+ “I’ll do what many failures do:
+ &emsp; “I’ll go upon the stage.”
+<p> &emsp; “Oh, cluck-a-tuck-a-tuck!” its mother cackled
+ &emsp; &emsp; When that egg came on this earth;
+ She felt her offspring would achieve both fame and glory.
+ &emsp; Surprising was his luck when life he tackled.
+ &emsp; &emsp; Though an egg of humble birth,
+ At last he rose to be the hero of this story.
+<p><span class="left sc">Chorus</span> &emsp; Oh, <span class="unclear" title="P/v has “chuck”">cluck</span>-a-tuck-a-tuck, etc.
+<p><span class="left sc">Genie</span> That egg in silence bore its wrong,
+ &emsp; The world kept getting colder,
+ Meanwhile the subject of our song
+ &emsp; Continued growing older.
+ Until a little gall’ry boy
+ &emsp; One bright and happy day
+ Bought up that brave and patient egg
+ &emsp; And took it to the play.
+<p><span class="left sc">Chorus</span> And then it laughed—
+<span class="left sc">Genie</span> &emsp; &emsp; &emsp; &emsp; “Ah ha ha ha!
+ &emsp; “At last I’m sure of it:
+ I’m bound to go upon the stage,
+ &emsp; And make an awful hit.”
+<p> &emsp; Oh, cluck-a-tuck-tuck, etc.
+<p><span class="left sc">Genie</span> The play of Hamlet was the bill.
+ &emsp; The cast was queer and seedy.
+ ’Twas headed by an awful pill—
+ &emsp; An amateur <a href="https://en.wikipedia.org/wiki/William_Macready">Macready</a>.
+ And when he came upon the scene,
+ &emsp; According to its plan,
+ The patient egg went on the stage
+ &emsp; And hit the leading man!
+<p><span class="left sc">Chorus</span> So ne’er despair!
+<span class="left sc">Genie</span> &emsp; &emsp; &emsp; &emsp; Oh, no, no, no!
+ &emsp; When trouble comes, I beg
+ That you’ll recall this touching tale
+ &emsp; And <em>omulate</em> the egg.
+<p> &emsp; Oh, cluck-a-tuck-tuck, etc.
+</div>
+
+<p>[<i>Exit <span class="sc">Miss Prisms</span>, <span class="sc">Vizier</span>, and
+<span class="sc">Chorus</span>.</i>]
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p class="who">Duet—<span class="sc">Amine</span> and <span class="sc">Scotty</span>
+<p><span class="left sc">Amine</span> Young Torah Tep was the boy for me;
+ A wonderful acrobat was he;
+ His legs were long, his air was solemn;
+ He had no ribs nor spinal column.
+ Whene’er he wanted to win my eye,
+ He would proceed with a hauteur high
+ To wear himself as his own necktie
+ &emsp; And rivals thus defy.
+<p><span class="left sc">Sco.</span> Don’t talk of Torah Tep to me;
+ Such feats are plain as A, B, C.
+ No self-respecting acrobat
+ Today would stoop to stuff like that.
+ Could Torah, whom you hold so dear,
+ Like a true lover’s knot appear,
+ Or promenade upon his ear?
+ &emsp; Two tricks that I have pat!
+<p><span class="left sc">Both</span> Oh, who so proud as the man who knows
+ How to tie his elbows round his nose,
+ Or who himself at times amuses
+ By making of his legs slip-nooses!
+ All innocent he of vertebrae;
+ He, in his jointless, boneless way,
+ Lives his unusual careless day—
+ &emsp; The happy acrobat!
+</div>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p class="who">Finale—Act II
+<p class="who">Song—<span class="sc">Aladdin</span>, <span class="sc">Amine</span>, <span class="sc">Genie</span>, and <span class="sc">Vizier</span>
+<p><span class="left sc">All</span> By accident all of our sorrows are turned to joy.
+ &emsp; Although we must dissemble,
+ We’ve found a law that will frighten the Yankee boy
+ &emsp; And will no doubt make him tremble.
+<p><span class="left sc">Genie</span> In writings of the sages,
+ On musty, dusty pages,
+ In the book on heri<em>tages</em>,
+ &emsp; We have found this ancient law:
+<p><span class="left sc">All</span> “If any one,” the sages say,
+ &emsp; “Should steal the lamp, just then
+ “Its power fails, until the day
+ &emsp; “It’s stolen back again.”
+<p> Hush, hush! Hush, hush! Hush!
+ We’ll temporize while he is nestling in balmy sleep.
+ &emsp; Awake, he might prove cranky.
+ The lamp we’ll grab; then in a dungeon both dank and deep
+ &emsp; We will lock this little Yankee.
+<p> In writings of the sages, etc.
+</div>
+
+<p>[<i>They take the lamp from <span class="sc">Chris</span>. He suddenly awakes.</i>]
+
+<div class="song">
+<p><span class="left sc">Chris</span> Give me the lamp!
+ You are robbers, cowards!
+<span class="left">[<i>To <span class="sc">Genie</span></i>]</span> I command you: help me!
+<p><span class="left sc">Al.</span> What? He obey you? He cannot do it!
+<span class="left">[<i>triumphantly</i>]</span> I hold the lamp, and he becomes my slave again!
+<p><span class="left sc unclear" title="P/v does not assign this vocal line, but it is neither Aladdin’s nor Chris’s">Genie</span> Now toddle along, like a good little chap;
+ &emsp; You are out of the game just now.
+ Tall talking’s no good, and I won’t let you scrap,
+ &emsp; So to chance you must meekly bow.
+<p><span class="left sc">Chris</span> If you’re half a man, you’ll fight me.
+<p><span class="left sc">Al.</span> Nothing, sir, will so delight me.
+</div>
+
+<p>[<i><span class="sc">Aladdin</span> and <span class="sc">Chris</span> select weapons.
+Meanwhile, enter the <span class="sc">Captain of the Guard</span>.</i>
+
+<p>[<i><span class="sc">Aladdin</span> and <span class="sc">Chris</span> fight.</i>
+
+<p>[<i>Enter <span class="sc">Fanny</span>.</i>]
+
+<div class="song">
+<p><span class="left sc">Fanny</span> Desist! Refrain! What means this sanguinary scene?
+ Whate’er your quarrel, I beg to intervene.
+<p><span class="left sc">Al.</span> Sweet Princess, the wondrous lamp is mine,
+ And it—and all I have—is thine.
+<p><span class="left"><span class="sc">Fanny</span> [<i>recit.</i>]</span> No, no! Perhaps I’ll flirt, perhaps coquette,
+ But I’m a girl who never yet
+ Saw royal prince or coronet
+ &emsp; That I’d exchange for a Yankee boy.
+</div>
+
+<div class="song">
+<p class="who">Song—<span class="sc">Fanny</span>, <span class="sc">Aladdin</span>, <span class="sc">Chris</span>, <span class="sc">Miss Prisms</span>, <span class="sc">Captain</span>, <span class="sc">Genie</span>, and <span class="sc">Vizier</span>
+<p><span class="left sc">Fanny</span> The bold Yankee boy is the boast of his nation;
+ &emsp; There’s no land where his equal has ever been known.
+ He’s the careless and crownless young king of creation—
+ &emsp; Mighty monarch who needs neither sceptre nor throne.
+<p><span class="left sc">Genie</span> &emsp; For at planning or doing
+ &emsp; Or fighting or wooing
+ Or whatever you choose, he’s a pride and a joy.
+<p><span class="left sc">All</span> &emsp; To the maid who would mate,
+ &emsp; No prize is so great,
+ As the love of a true-born Yankee boy.
+<p><span class="left sc">Genie &amp; Viz.</span> Of a Kentucky boy—
+ Or a New Hampshire boy—
+<span class="left sc">All</span> An American boy!
+<p> The bold Yankee boy, etc.
+<p> A king who needs neither sceptre nor throne—
+ &emsp; For he is an American boy.
+</div>
+
+<div class="song">
+<p><span class="left sc">Fanny</span> Come, Chris, we will go home.
+<span class="left"><span class="sc">Al.</span> [<i>intercepting them</i>]</span> &emsp; Ah, pardon, sweet princess; you must remain.
+<span class="left sc">Chris</span> Must? How dare you say it?
+ &emsp; From insistent language please refrain.
+</div>
+
+<p>[<i>The clock strikes twelve.</i>]
+
+<div class="song">
+<p><span class="left sc">Genie</span> &emsp; ’Tis the midnight hour!
+ The gates of fairyland are locked!
+ &emsp; All must remain to-night,
+ For ev’ry door and gate is blocked.
+<p><span class="left sc">Miss P.</span> As chaperone, I’ll pick the bone.
+ &emsp; <span class="unclear" title="P/v seems to assign this line to “Aladdin and the Genie”">Come here at once, I say.</span>
+<p><span class="left sc">Al. &amp; Genie</span> Please understand that we demand
+ &emsp; You let us go our way.
+<p><span class="left"><span class="sc">Miss P.</span> [<i>spoken</i>]</span> Come, children.
+<p><span class="left sc">Genie</span> If she gets mad she’ll thrash us all.
+ Suppose the household troops we call.
+<p><span class="left sc">Al.</span> All right!
+</div>
+
+<p>[<i><span class="unclear" title="Seven bars of music here; p/v lacks directions; added on my own authority">Flourish
+of trumpets. Enter <span class="sc">Soldiers of Etheria</span>, who take <span class="sc">Chris</span>
+and <span class="sc">Fanny</span> prisoner.</i>]</span>
+
+<p><span class="sc dr">Al.</span>
+You are my prisoners.
+
+<p><span class="sc dr">Chris</span>
+No; not yours. The prisoners of the man behind the gun.
+
+<div class="song">
+<p class="who">Song—<span class="sc">Aladdin, Genie,</span> and <span class="sc">Omnes</span>
+<p><span class="left sc">Al.</span> The man behind the gun!
+ Stand ever ready to defend him!
+ When the call to battle’s sounding
+ Anxious words he’s not propounding
+ But it’s “Up and at ’em, boys!”
+ ’Tis not the hour for meditation,
+ Mincing words, or explanation,
+ But it’s “Up and at ’em, boys! Charge!”
+<p> See his gallant charge!
+ May luck and victory attend him!
+ Watch him rallying and fighting;
+ Now the foe the dust is biting,
+ For it’s “Up and at ’em, boys!”
+ The battle rages fast and faster
+ To the foeman’s great disaster,
+ For it’s “Up and at ’em, boys!”
+<p><span class="left sc">All</span> Oh, crown him hero of our land!
+ &emsp; He’ll fight till the battle’s won.
+ Oh, brave heart of a valiant band,
+ &emsp; The man behind the gun!
+<p><span class="left sc">Genie</span> Is he just treated right
+ For all of the sacrifice he’s making?
+ When he shivers in the trenches,
+ And the rain his body drenches,
+ It is “Up and at ’em, boys!”
+ Far in the fields he stands as picket;
+ Hark! a shot comes from the thicket,
+ And it’s “Up and at ’em, boys!”
+<p> He rests upon his arms,
+ And, when the morning light is breaking,
+ See him warm each icy finger
+ By the smold’ring coals that linger;
+ Then it’s “Up and at ’em, boys!”
+ What, though his comrades die about him?
+ Whizzing bullets cannot rout him,
+ For it’s “Up and at ’em, boys!”
+<p><span class="left sc">All</span> Oh, crown him hero of our land, etc.
+</div>
+
+<p style="margin-top: 60px;"><center><span class="sc">End of Act II</span></center>
+
+<hr width="20%"/><br>
+<center><h2>Act III</h2></center>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p><span class="left sc">Viz.</span> Prepare to receive
+ With a crook of your knees
+ And a bow of forty-five degrees,
+ &emsp; A new-made dignitary!
+ Though honor’d she be,
+ She’s not envied by me,
+ For her post is very far from <span class="unclear" title="P/v: “fine”">free</span>
+ &emsp; From dangers mortuary.
+</div>
+
+<p>[<i>Enter <span class="sc">Fanny</span>.</i>]
+
+<div class="song">
+<p><span class="left sc">Fanny</span> Officially appointed I
+ &emsp; As story-teller to the court;
+ To charm Aladdin I must try
+ &emsp; With stories of the proper sort.
+ And my demise will soon ensue
+ &emsp; Should he be bored by one of these;
+ So I have come to learn from you
+ &emsp; What stories will Aladdin please.
+<p><span class="left sc unclear" title="P/v assigns this treble vocal line ambiguously to not-the-Vizier">Fanny</span> Let us a sample hear of your invention.
+<p><span class="left sc unclear" title="P/v, seemingly correctly, assigns this bass vocal line to the Vizier">Viz.</span> <span class="unclear" title="To whose advice?">And now to their advice give close attention.</span>
+</div>
+
+<p>[<i><span class="unclear" title="Fanny and the Vizier, one assumes">They</span> sit down.</i>]
+
+<div class="song">
+<p><span class="left sc">Fanny</span> &emsp; “By my grandma I’ve been told—”
+<span class="left sc">Viz.</span> No, no, no, no, no, no, no. Stop where you are!
+<p><span class="left"><span class="sc">Fanny</span> [<i>trying again</i>]</span> &emsp; “In the golden days of old—”
+<span class="left sc">Viz.</span> No, no, no, no, no, no, no. That line we bar!
+<p><span class="left sc">Fanny</span> “Once there lived a good young king—”
+<span class="left sc">Viz.</span> &emsp; &emsp; That will not do!
+<p><span class="left sc">Fanny</span> You’re not pleased with anything!
+<span class="left sc">Viz.</span> &emsp; &emsp; Try something new!
+<p><span class="left sc">Fanny</span> Then listen while I sing of Love and Celestine.
+</div>
+
+<div class="song">
+<p class="who">Song—<span class="sc">Fanny</span> and <span class="sc">Chorus</span>
+<p><span class="left sc">Fanny</span> “Where is Love?” said Celestine—
+<span class="left sc">Chorus</span> &emsp; &emsp; A shepherdess was she.
+<span class="left sc">Fanny</span> “Who is Love?” said Celestine—
+<span class="left sc">Chorus</span> &emsp; &emsp; “Where may his dwelling be?”
+<span class="left sc">Fanny</span> And then she heard with sad surprise
+ That Love is a lad in simple guise,
+ Fair and young with sightless eyes—
+<span class="left sc">Chorus</span> &emsp; &emsp; Dear eyes that never see.
+<span class="left sc">Fanny</span> Soft and deep the maiden’s sighs—
+<span class="left sc">Chorus</span> &emsp; &emsp; A tender heart had she.
+<p><span class="left sc">Fanny</span> So sweet Celestine went forth to find
+ Young Cupid whom sages said was blind.
+ &emsp; “Ah,” sighing, “Where is he?”
+ &emsp; “Ah,” sighing, “Where is he?”
+ That for the poor lad she ever might care;
+ Her cottage with him to share.
+ &emsp; “Ah,” sighing, etc.
+<p><span class="left sc">Chorus</span> Ah, sweet Love, lonely and blind,
+ &emsp; &emsp; She went to find.
+<span class="left sc">Fanny</span> Far eastward and westward she went,
+ &emsp; &emsp; Love-tokens eagerly sent.
+<p><span class="left sc">Chorus</span> Did Cupid ever reply
+ By word or glances of eye?
+<span class="left sc">Fanny</span> Not he; though she sought day by day—
+<span class="left sc">Chorus</span> Dan Cupid was ever away.
+<span class="left sc">All</span> &emsp; Ever away, ever away—
+ &emsp; Cupid was ever away.
+<p> For a year sought Celestine—
+<span class="left sc">Fanny</span> &emsp; &emsp; But all in vain she sought.
+<span class="left sc">All</span> Far and near sought Celestine—
+<span class="left sc">Fanny</span> &emsp; &emsp; The seeking brought her naught.
+ When to her home she turned once more
+ &emsp; A-weary of heart was she;
+ There stood Love beside her door—
+ There stood Love beside the door!
+<p> This is the moral of this little tale:
+<span class="left sc">All</span> Those who seek for love must fail.
+ For him in vain you’ll search the wide world through;
+ ’Tis Love who must come to you.
+</div>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p class="who">Song—<span class="sc">Genie, Fanny, Chris, Miss Prisms</span>, and <span class="sc">Scotty</span>
+<p><span class="left sc">Genie</span> When Wagner had the lamp, he came one day to me,
+ “Oh, I really am in an awful fix, and can’t get out,” said he.
+ “For in my latest work I cannot end Act Two;
+ “Of ten finales none will suit; I don’t know what to do.”
+<p><span class="left sc">All</span> He was the nicest man (I/he) ever worked for;
+ (I’m/He’s) telling you the truth, so do not doubt (me/him).
+ &emsp; He was clever, (I/he’ll) admit,
+ &emsp; And talented a bit,
+ But he couldn’t do a blessed thing without (me/him)!
+<p><span class="left sc">Genie</span> When <a href="https://en.wikipedia.org/wiki/Edwin_Forrest">Forrest</a> had the lamp, he ruled the local stage.
+ I really showed him how to act, and made him all the rage.
+ You’d ne’er have heard of Ned if me he’d never met.
+ A lot of things I taught to him; the rest are doing yet.
+<p><span class="left sc">All</span> He was the nicest man, etc.
+</div>
+
+<p>[<span class="unclear" title="I lack a source for this dialogue"><i>Dialogue omitted.</i></span>]
+
+<div class="song">
+<p class="who">Finale
+<p><span class="left sc">Fanny</span> The man behind the gun!
+ Stand ever ready to defend him!
+ When the call to battle’s sounding
+ Anxious words he’s not propounding
+ But it’s “Up and at ’em, boys!”
+ ’Tis not the hour for meditation,
+ Mincing words, or explanation,
+ But it’s “Up and at ’em, boys! Charge!”
+<p> See his gallant charge!
+ May luck and victory attend him!
+ Watch him rallying and fighting;
+ Now the foe the dust is biting,
+ For it’s “Up and at ’em, boys!”
+ The battle rages fast and faster
+ To the foeman’s great disaster,
+ For it’s “Up and at ’em, boys!”
+<p><span class="left sc">All</span> Oh, crown him hero of our land!
+ &emsp; He’ll fight till the battle’s won.
+ Oh, brave heart of a valiant band,
+ &emsp; The man behind the gun!
+</div>
+
+<p style="margin-top: 60px;"><center><span class="sc">Curtain</span></center>
+
+<a id="apocrypha"></a>
+<hr width="60%" style="margin-top: 60px;"/><br>
+<center><h2>Apocrypha</h2></center>
+
+<p>The following songs are not in the piano/vocal score (published 1899),
+but are attested in some form or other in library materials.
+These songs may or may not have ever formed part of the production.
+
+<center><hr width="20%" style="margin: 20px;"/></center>
+
+<p>This “Act II opening chorus and dance” matches autograph sheet music
+in the Library of Congress’ Sousa collection (box 7 folders 13 and 14).
+The sheets are dated “JPS Nov 6 1899 NY.”
+
+<div class="song">
+<p class="who">Chorus
 <p> To Aladdin a health we will drain
- In a wine that to none is inferior;
+ &emsp; In a wine that to none is inferior;
  For over us long may he reign;
- As a prince he is very superior!
+ &emsp; As a prince he is very superior!
+<p> &emsp; &emsp; Fill the cup;
+ &emsp; &emsp; &emsp; Fill it high.
+ &emsp; &emsp; Fill it up;
+ &emsp; &emsp; &emsp; Drink it dry
+ &emsp; &emsp; To Aladdin, fair Prince of Etheria—
+ &emsp; &emsp; To Aladdin, fair Prince of Etheria!
+<p> Here in Etheria we of the faster set
+ Make life a merry dance marked by the castanet.
+ Sweetly our melodies charm the auricular;
+ Tinkles the tambourine, murmurs the light guitar.
+ &emsp; Tra la, tra la, tra la, tra la,
+ &emsp; Tra la, tra la, tra la la la la la!
+<p> To Aladdin a health we will drain, etc.
+</div>
 
-<p> Fill the cup;
- Fill it high;
- Fill it up;
- Drink it dry
- To Aladdin fair Prince of Etheria—
- To Aladdin fair Prince of Etheria!
+<center><hr width="20%" style="margin: 20px;"/></center>
 
-<p> Here in Etheria
- We of the faster set
- Make life a merry dance
- Marked by the castanet;
- Sweetly our melodies
- Charm the auricular;
- Tinkles the tambourine,
- Murmurs the light guitar.
- Tra la, tra la, tra la, tra la,
- Tra la, tra la, tra la la la la la!
+<p>“Though Broadway is the Only Street” has manuscript lyrics (2pp)
+in the Library of Congress’ Sousa collection (box 7 folder 2),
+in Sousa’s own hand. Sousa wrote only the first two verses; then he adds:
+“Verses 3 and 4 describe the sports on the Rialto and the coons on
+Thompson Street.” An autograph score fragment (2pp) again with only
+these two verses is in the Library of Congress’ Sousa collection
+(box 7 folder 18), dated “JPS Oct 17th, Boston.”
 
-To Aladdin a health we will drain, etc.
+<div class="song">
+<p class="who">Song—<span class="sc">Genie</span>
+<p> Though Broadway is the only street
+ &emsp; They celebrate in song,
+ New York can show some other lanes
+ &emsp; I’d rather stroll along.
+ I’d happy be could I but see
+ &emsp; Just one of them to-day,
+ And with those people promenade
+ &emsp; Who walk and talk this way.
+</div>
 
--->
+<p>[<i><span class="sc">Genie</span> and <span class="sc">Scotty</span>
+walk from <span class="sd">R.</span> and <span class="sd">L.</span> to
+<span class="sd">C.</span> They do the heavy swell loll and shake hands
+when they meet. At “There goes...” they tip their hats to an imaginary
+girl who passes.</i>]
+
+<div class="song">
+<p> How de doody doody doo!
+ &emsp; You are looking deuced jolly!
+ &emsp; How are Weginald and Cholly,
+ And, old fellow, how are you?
+ There goes Kitty Van Der Spicer;
+ There is weally not a nicer
+ Or a sweetah little creechah
+ &emsp; On Fifth Av-e-nue.
+<p> There is another thoroughfare
+ &emsp; That by its lonesome stands;
+ In vain to find its match you search
+ &emsp; Our own and other lands.
+ Ablaze with light it is all night;
+ &emsp; No street is quite as gay;
+ And when its people promenade,
+ &emsp; They walk and talk this way:
+</div>
+
+<p>[<i><span class="sc">Genie</span> and <span class="sc">Scotty</span>
+repeat business of doing walk characteristic of the following refrain,
+again meeting at <span class="sd">C.</span></i>]
+
+<div class="song">
+<p> Hully smoke an’ hully gee!
+ &emsp; You kin pinch me for a dago
+ &emsp; If you ain’t the real gazaybo,
+ Just der best I ever see!
+ That’s me gal, an’ she’s a looloo!
+ Wid her iv’ries full of tulu
+ Little Lizzie knocks ’em dizzy
+ &emsp; On der Bow-er-ie.
+</div>
+
+<center><hr width="20%" style="margin: 20px;"/></center>
+
+This unfinished “Drinking Song” has manuscript lyrics (2pp, one double-sided) in Sousa’s own hand
+in the Library of Congress’ Sousa collection (box 7 folder 2).
+Manuscript score parts for the Dolls (1p) and for Scotty (1p), with different pieces in different hands,
+are in the Library of Congress’ Sousa collection (box 7 folder 3).
+No score for the Genie’s part seems extant.
+
+<div class="song">
+<p class="who">Song—<span class="sc">Genie</span>, <span class="sc">Scotty</span>, and <span class="sc">Dolls</span>
+<p><span class="left sc">Genie</span> When the spirit that’s born of the wine
+ &emsp; Through your veins like a torrent is pushing;
+ When with frenzy that’s almost divine
+ &emsp; You are throbbing and pulsing and gushing;
+ When all that is left of your brain
+ &emsp; Wild schemes of enjoyment is planning—
+ &emsp; &emsp; The thought comes, perchance,
+ &emsp; &emsp; Of the gay dance of France,
+ &emsp; And you find yourself madly cancanning!
+<p><span class="left sc unclear" title="7/2 merely says “Refrain”; assigned on my own authority">All</span> Hi, hi, huzza!
+ Piff! boum! ha, ha!
+ &emsp; The dance is waiting; let us go!
+ For its whirl our souls are sighing,
+ And our heels would fain be flying
+ Through its mazes, gaily dashing,
+ <span class="unclear" title="The music in 7/3 omits this line">Hearts a-beating, eyes a-flashing,</span>
+ &emsp; Rosy cheeks aglow!
+ Hi, hi, huzza!
+ Piff! boum! ha, ha!
+ &emsp; Oh, let the day
+ &emsp; Bring what it may
+ <span class="unclear" title="The music in 7/3 replaces these four lines with “For its whirl ... be flying, Hearts a-beating, eyes a-flashing, Rosy cheeks aglow.”">If we may dance the night away.
+ &emsp; So brief and fleet
+ &emsp; Its course so sweet;
+ With frowns the golden dawn we greet!</span>
+<p><span class="left sc">Genie</span> When with paint of the ruddiest hue
+ &emsp; The old town you are neatly adorning—
+ When the time is ten bottles past two,
+ &emsp; You start home with the milk of the morning.
+ When with the first pang of remorse
+ &emsp; Such nights in the future you’re banning,
+ &emsp; &emsp; The thought comes, perchance,
+ &emsp; &emsp; Of the gay dance of France,
+ &emsp; And you find yourself madly cancanning!
+<p><span class="left sc">All</span> Hi, hi, huzza!, etc.
+<p><span class="left sc">Genie</span> The night we will give to wine,
+ &emsp; To revelry, till the day.
+<span class="left sc">All</span> Then let us sing till rafters ring
+ &emsp; A frolicking, rollicking <span class="unclear" title="7/3 has “strain”">lay</span>!
+<span class="left sc">Genie</span> If rid you would be of cares,
+ &emsp; Try drowning ’em in the drink!
+<span class="left sc">All</span> &emsp; &emsp; So charge your glass,
+ &emsp; &emsp; Let bumpers pass,
+ &emsp; And merrily, cheerily <span class="unclear" title="7/3 has “troll”">clink</span>!
+<p><span class="left sc">Genie</span> Keen repentance comes to-morrow
+ &emsp; Of the deep and dark brown sort.
+ Yet why should we vain trouble borrow?
+ &emsp; Ho! <i>garçon!</i> bring another quart!
+<p><span class="left sc">All</span> Bromo-Seltzer comes to-morrow;
+ &emsp; With it, cracked ice upon the brow.
+ This is the price we pay in sorrow
+ &emsp; For what we are enjoying now.
+<p><span class="left sc">Genie</span> <span class="unclear" title="Thus in 7/2">Then here’s to the wine, etc.</span>
+<p><span class="unclear" title="Thus in 7/2">[<i>Can-can chorus repeated.</i>]</span>
+</div>
+
+<center><hr width="20%" style="margin: 20px;"/></center>
+
+<p>This “Tourist Quintette” matches the manuscript lyrics (2pp)
+in the Library of Congress’ Sousa collection (box 7 folder 2).
+Manuscript score parts for the verse
+(1pp, in multiple hands), and for Fanny, Chris, Miss Prisms, and “The Genie and Scotty,”
+are in the Library of Congress’ Sousa collection (box 7 folder 3).
+
+<div class="song">
+<p class="who">Quintette—<span class="sc">Fanny, Chris, Genie, Scotty,</span> and <span class="sc">Miss Prisms</span>
+<p><span class="left sc">Chris</span> Etheria at last we’ve found,
+ &emsp; And here we are to stay;
+ For ere we five are homeward bound
+ &emsp; A year may pass away.
+ Here in a palace free of rent,
+ Without a care, on pleasure bent,
+ We’ll agitate the Orient
+ &emsp; And raise the deuce to pay!
+<p><span class="left sc">Others</span> Pleasant, very!
+<span class="left sc">Chris</span> &emsp; Upon your aid may I depend?
+<span class="left sc">Others</span> Don’t you worry!
+<span class="left sc">Genie</span> &emsp; Just count <em>me</em> out of that, my friend!
+ &emsp; &emsp; For Fairyland a bore is
+ &emsp; &emsp; After all the glories
+ That make life not worth living far away from gay Broadway.
+<p> Naught is more fascinating,
+ Livening, exhilarating,
+ Sprightly and elevating,
+ &emsp; Than to amble in this way:
+ Top-hats politely tipping,
+ Over gutters lightly skipping,
+ While quite correctly tripping
+ &emsp; Down Broadway.
+<p><span class="left sc">Genie</span> Etheria at last we’ve found;
+ &emsp; A dead slow place it is.
+ No trolley cars go buzzing ’round;
+ &emsp; No automobiles whiz.
+ For it I do not care a cent;
+ Away from town I’m ne’er content.
+ I’d swap this mystic Orient
+ &emsp; For one small bot of fizz!
+<p><span class="left sc">Others</span> Naughty, very!
+<span class="left sc">Genie</span> &emsp; My townward way I’d like to wend.
+<span class="left sc">Others</span> In a hurry!
+<span class="left sc">Chris</span> &emsp; You may be right, at that.
+</div>
+
+<center><hr width="20%" style="margin: 20px;"/></center>
+
+<p>This comic song has manuscript lyrics (3pp)
+in the Library of Congress’ Sousa collection (box 7 folder 2).
+The three pages are numbered 1, 3, and 4. Page 4 ends with a
+blue crayon annotation: “etc. etc.”
+
+<div class="song">
+<p> If I’m to be a cipher in this worky, weary world—
+ &emsp; And it seems the one best bet that I’m to be—
+ &emsp; &emsp; I’ve devoted time and thought
+ &emsp; &emsp; To the character of nought
+ &emsp; That possesses most attractiveness for me.
+ &emsp; &emsp; I’ve been figuring to know
+ &emsp; &emsp; The special kind of “O”
+ &emsp; That has the most attractiveness for me!
+<p> [<i>second verse apparently missing</i>]
+<p> I’ve often thought I’d like to be the atmospheric space
+ &emsp; In the middle of a doughnut brown and small.
+ &emsp; &emsp; And without me doughnuts would
+ &emsp; &emsp; Not be nearly half so good;
+ &emsp; In point of fact, they wouldn’t be at all!
+ &emsp; &emsp; Only think—to be an “O”
+ &emsp; &emsp; Compassed all about by dough—
+ &emsp; Which, if it were gone, you wouldn’t be at all!
+<p> At times I’ve longed to be the hole within a dotted Swissy cheese,
+ &emsp; Or an eyelet on a lovely lady’s shoe;
+ &emsp; &emsp; And attraction seems to lurk
+ &emsp; &emsp; In the meshy open work—
+ &emsp; I could be the “nought” of naughty peek-a-boo!
+ &emsp; &emsp; I should love, upon my soul,
+ &emsp; &emsp; To be nothing but a hole—
+ &emsp; It’s the most important part of peek-a-boo.
+</div>
+
+<center><hr width="20%" style="margin: 20px;"/></center>
+
+<p>A fragment of orchestral score for this piece (3pp), with
+these lyrics, is in the Library of Congress’ Sousa collection (box 7 folder 10).
+The third page is dated “John Philip Sousa, Washington, D. C., Nov 18th 99.”
+
+<div class="song">
+<p><span class="left sc">Fanny</span> The swagger of the boys as they gaily march
+ &emsp; To the sound of the regimental bands,
+ And the flashing dashing air of the General
+ &emsp; As he shouts forth his orders and commands,
+ Together with the horses’ graceful step
+ &emsp; As up the avenue they prance,
+ Makes a picture that thrills ev’ry patriot soul
+ &emsp; With its glamour and its weird romance.
+</div>
+
+<center><hr width="20%" style="margin: 20px;"/></center>
+
+<p>The Library of Congress’ Sousa collection (box 7 folder 3) also
+contains one page of manuscript score marked “Chris,” which is in fact
+an early draft of <i>American Maid’s</i> “In the dimness of twilight.”
+Someone, presumably a curator, has penciled at the top, “Not in Sousa’s hand.”
+
+</div><!-- spacious -->
+</body>
+</html>

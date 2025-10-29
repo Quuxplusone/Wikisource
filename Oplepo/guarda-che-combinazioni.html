@@ -1,0 +1,257 @@
+<html lang="it">
+<head>
+<title>Guarda che combinazioni, Mimmo!</title>
+
+<style>
+div.spacious {
+  width: calc(min(65vw, 800px));
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10em;
+  color: #000066 ! important;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  line-height: 1.5;
+}
+div.poem {
+  white-space: pre-wrap;
+  margin: 0 4em;
+}
+p {
+  margin: 0.5em 0;
+  text-indent: 20px;
+}
+div.poem p {
+  text-indent: 0;
+}
+center p {
+  text-indent: 0;
+}
+a {
+  color: inherit;
+  text-decoration:underline;
+  text-decoration-style: dotted;
+}
+nobr {
+  white-space: nowrap;
+}
+div.footnotes1 {
+  font-size: 90%;
+  border: 1px solid black;
+  padding: 1em;
+}
+.pagenum {
+  position: absolute;
+  top: auto;
+  right: +1.5em;
+  width: 70px;
+  text-align: right;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  font-variant: normal;
+  letter-spacing: normal;
+  font-size: small;
+  color: #ff3300 ! important;
+}
+</style>
+</head>
+<body>
+<div class="spacious">
+
+<center>
+<h2><i>Piergiorgio Odifreddi</i></h2>
+<h1><i>Guarda che combinazioni, Mimmo!</i></h1>
+<p><i>Domenico D’Oria: On se souvient de toi</i>
+<p><i>Biblioteca Oplepiana<br>N. 44</i>
+<p><i>(2020)</i>
+</center>
+
+<a id="p380"><span class="pagenum">p380</span></a>
+<p><i>Caro Mimmo,<br>
+è solo dopo aver conosciuto te e Lello, ed essere entrato grazie a
+voi nell’Oplepo, che ho avuto l’occasione di coltivare attivamente il
+mio interesse per la letteratura combinatoria, rimasto fino ad allora
+passivo. Nel córso di tutti questi anni ho beneficiato degli esempi
+che voi tutti mi avete fornito, e a volte ne ho anche scovato qualcun
+altro per conto mio. Ti dedico questo breve riassunto di ciò che ho
+imparato, a presente e futura memoria.</i>
+
+<p>Nel suo primo capolavoro matematico, la giovanile
+<i>Dissertazione sull’arte combinatoria</i> (1666), Leibniz
+discute a lungo delle applicazioni delle permutazioni alla
+poesia. Il più antico autore che cita è il latino Publio Porfirio
+Optaziano, che nel <i>Panegirico</i> in onore dell’imperatore
+Costantino aveva fatto sfoggio di carmi figurati,
+intrecciandoli con acrostici e palindromi: in particolare,
+Leibniz ricorda 26 suoi esametri a lunghezza crescente, di
+cui ciascuno supera di una lettera il precedente.
+
+<p>Sono citati anche l’umanista italiano Giulio Cesare
+Scaligero e il gesuita olandese Bernard Bauhuis, per
+motivi collegati. Il primo pubblicò tra il 1533 e il 1547
+cinque volumi di ambigui “versi proteiformi” in latino,
+nei quali si potevano permutare in vari modi le parole fra
+loro, preservando il significato e il metro. Anche se, come
+notò il francese Pierre Daniel Huet, ne risultavano spesso
+«poesie sgradevoli e sgraziate che disonorano il Parnaso».
+
+<p>Il secondo pubblicò negli <i>Epigrammi</i> (1615) un “proteo
+verginale” dedicato alla Madonna: <i>tot tibi sunt dotes,
+Virgo, quot sidera cœlo</i>, “tante sono le tue doti, o Vergine,
+quante le stelle in cielo”. Nei <i>Miracoli della pietà</i> (1617) il
+<a id="p381"><span class="pagenum">p381</span></a>
+filologo olandese Erycius Puteanus ne mise in fila ben 1.022
+permutazioni che preservavano la struttura dell’esametro:
+un intero libro costituito da un unico verso, variato tante
+volte quante erano le stelle catalogate da Tolomeo.
+
+<p>Leibniz pose il problema di calcolare quante fossero le
+permutazioni di quel tipo. Per trovare il numero esatto
+bisogna ricordare che gli esametri sono composti di sillabe
+corte (ᴗ) o lunghe (–), suddivise in sei piedi: i primi
+quattro sono dattili (–ᴗᴗ) o spondei (––), il quinto è un
+dattilo, e il sesto un trocheo (–ᴗ) o uno spondeo. Delle
+otto parole del “proteo verginale”, tre (<i>tot, sunt, quot</i>) sono
+monosillabiche lunghe, due (<i>dotes, cœlo</i>) sono spondei,
+una (<i>sidera</i>) è un dattilo, mentre (<i>Virgo</i>) può essere sia un
+trocheo che uno spondeo, e (<i>tibi</i>) sia un pirrichio (ᴗᴗ) che
+un giambo (ᴗ–).
+
+<p>Come si vede, il problema non è banale, e la storia della
+sua soluzione è riassunta da Donald Knuth nel §7.2.1.7
+della sua monumentale <i>Arte della programmazione
+informatica</i> (2005). Le cifre proposte furono 2.196 da Jean
+Prestet nel 1675, 3.096 da John Wallis nel 1685, 2.580 da
+Leibniz nel 1686, 3.276 di nuovo da Prestet nel 1689,
+3.312 da Jacob Bernoulli nel 1692 e 2.880 sia da William
+Whitworth che da William Hartley nel 1902. La risposta
+esatta è quella di Bernoulli, ottenuta anticipando il metodo
+del <i>backtracking</i>, utile anche per risolvere il Sudoku.
+
+<p>Se non si richiede di preservare la struttura dell’esametro
+le permutazioni diventano invece 40.320: cioè, il prodotto
+dei numeri da 1 a 8, indicato con 8! e chiamato il
+“fattoriale” di 8. La stessa tecnica permette di calcolare
+immediatamente in 7! x 3 = 30.240 il numero delle
+permutazioni dei 7 sostantivi e dei 3 verbi evidenziati nei
+due versi seguenti, proposti nella <i>Ricreazione</i> (1651) da
+Georg Philipp Harsdörfer, un altro degli autori citati da
+Leibniz:
+
+<blockquote>
+<p><i>Onore, arte, denaro, bene, amore, moglie</i> e <i>figlio</i>
+l’uomo li ha <i>cercati, sentiti, sperati</i> e persi.
+</blockquote>
+
+<a id="p382"><span class="pagenum">p382</span></a>
+<p>Molto maggiore è il numero dei modi in cui si può
+leggere <i>In balìa di una sorte avversa</i> (1969) di Bryan
+Johnson, un libro consistente di 27 capitoli sciolti chiusi in
+una scatola, i cui diversi modi di ordinamento e di lettura
+sono ben 27! = 10.888.869.450.418.352.160.768.000.000,
+pari a circa 10<sup>28</sup>. E ancora di più sono le permutazioni delle
+150 pagine sciolte di <i>Composizione n. 1</i> (1962) di Marc
+Saporta, equivalente all’enorme numero 150!, pari a circa
+10<sup>262</sup>.
+
+<p>Intermedio fra questi due estremi è il numero di possibili
+strutture di storie del tipo di quelle usate da Italo Calvino
+nel <i>Castello dei destini incrociati</i> (1969) e nella <i>Taverna
+dei destini incrociati</i> (1973). Entrambi i libri sono
+incentrati sulle 78 carte dei tarocchi viscontei, che vengono
+dispiegate una dopo l’altra in una delle loro 78! possibili
+permutazioni, pari a circa 10<sup>115</sup>. Calvino parla al proposito
+di «un numero finito di elementi le cui combinazioni si
+moltiplicano a miliardi di miliardi», ma in realtà già le
+permutazioni di Johnson erano miliardi di miliardi di
+miliardi, mentre quelle di Calvino richiederebbero la
+ripetizione della parola “miliardo” una dozzina di volte.
+
+<p>Oltre alle permutazioni senza ripetizione di un certo
+numero di elementi, anche le permutazioni con ripetizione,
+dette combinazioni, intervengono nella “letteratura
+combinatoria” che da esse prende il nome. Un esempio
+minimale è fornito da <i>Palomar</i> (1983) dello stesso Calvino,
+una raccolta di 3<sup>3</sup>=27 brevi racconti che propongono tutte
+le possibili combinazioni dei 3 processi di descrizione
+sensoriale, narrazione linguistica a meditazione mentale:
+dalla prima, una descrizione di una descrizione di una
+descrizione di un’onda, a quella centrale, una narrazione di
+una narrazione di una narrazione sui formaggi, all’ultima,
+una meditazione su una meditazione su una meditazione
+sulla morte, passando per tutte le altre combinazioni.
+
+<p>Il più antico esempio di un’opera letteraria a struttura
+combinatoria è però l’<i>I Ching</i>, o <i>Libro dei mutamenti</i>,
+uno dei cinque classici confuciani, organizzato attorno ai
+2<sup>6</sup>=64 esagrammi formati da 6 segmenti di 2 tipi (interi
+<a id="p383"><span class="pagenum">p383</span></a>
+o dimezzati), che forniscono la rappresentazione binaria
+dei numeri da 0 a 63. Successiva di pochi secoli è un’altra
+opera cinese, il <i>Canone del mistero supremo</i> di Yang
+Hshiung, che utilizza invece i 3<sup>4</sup>=81 tetragrammi formati
+da 4 segmenti di 3 tipi (interi, dimezzati o trisecati), che
+forniscono la rappresentazione ternaria dei numeri da 0 a
+80.
+
+<p>Anche i pitagorici sfruttarono la possibilità combinatorie
+nelle loro opere: almeno secondo Vitruvio, che
+nell’<i>Architettura</i> racconta che i loro libri consistevano di 6
+capitoli di 6 pagine di 6 versi, per un totale di 6<sup>3</sup>=216 versi.
+Un’analoga, ma più sofisticata, struttura tridimensionale
+è stata adottata da Jacques Roubaud in <i>Trentuno al cubo</i>
+(1973): una collezione di 31 poemi di 31 versi di 31
+sillabe, per un totale di 31<sup>3</sup>=29.791 sillabe. La scelta del
+numero 31 deriva dai <i>tangka</i> giapponesi, che consistono
+appunto di 31 sillabe, mentre l’ispirazione per i “<i>tangka</i>
+di <i>tangka</i>” deriva invece dai <i>renga</i> giapponesi, che erano
+appunto poemi di poemi.
+
+<p>Una divertente opera combinatoria moderna è l’<i>Animalario
+universale</i> (2003) di Miguel Murugarren, che consiste delle
+immagini di 16 animali reali, divise in 3 parti: aprendo il
+volume a caso si ottiene una delle possibili 16<sup>3</sup>=4.096
+combinazioni costituite di animali fantastici tripartiti, che
+mutuano ciascuna parte da uno dei sedici animali originali.
+
+<p>In precedenza Raymond Queneau aveva già usato lo
+stesso principio in <i>Centomila miliardi di poemi</i> (1961),
+che consiste di 10 sonetti scritti ciascuno su una pagina
+tagliata in 14 striscioline di un verso ciaascuna: aprendo il
+volume a caso si ottiene in questo caso una delle possibili
+10<sup>14</sup> composizioni che mutuano ciascun verso da uno dei
+quattordici sonetti originari. Ovviamente, il loro numero
+è appunto pari ai centomila miliardi che dànno il titolo
+all’opera.
+
+<a id="p384"><span class="pagenum">p384</span></a>
+<p>Un numero di combinazioni all’incirca pari a quello di
+Queneau si deduce da <i>L’incendio della casa abominevole</i>
+(1973) di Calvino: un racconto in cui 4 personaggi
+possono compiere 12 tipi di azioni criminose transitive
+e non riflessive: accoltellare, diffamare, drogare, indurre
+al suicidio, legare e imbavagliare, minacciare, prostituire,
+ricattare, sedurre, spiare, strozzare, violentare. Per ogni
+coppia di personaggi si possono dunque configurare
+<nobr>4<sup>4</sup> &minus; 4</nobr> = 12 relazioni diverse per ciascuno dei 12 tipi di
+azioni, il che ammonta a 12<sup>12</sup> possibilità, pari
+ a circa 10<sup>13</sup>.
+
+<p>Il più famoso esempio di combinazioni potenziali si
+trova però nella <i>Biblioteca di Babele</i> (1940) di Jorge Luis
+Borges, che contiene tutte le possibili combinazioni di
+25 simboli grafici in volumi di 410 pagine, ciascuna di
+40 righe, ciascuna di 40 lettere. Il numero dei volumi è
+dunque uguale al numero delle combinazioni di 25 simboli
+su 410x40x40 posti: cioè 25<sup>256,000</sup>, pari a circa
+ 10<sup>800.000</sup>. A
+testimonianza di quanta strada abbia percorso la letteratura
+combinatoria nei tre secoli e mezzo trascorsi dai primi
+timidi calcoli sulle permutazioni dei versi proteiformi
+discussi da Leibniz nel suo <i>Trattato</i>, che rimanevano tutti
+nell’ordine di 10<sup>3</sup>.
+
+</div><!-- spacious -->
+</body>
+</html>

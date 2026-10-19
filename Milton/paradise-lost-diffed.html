@@ -7,7 +7,7 @@
 :root {
   --black: rgb(26, 26, 26);
   --white: rgb(255, 255, 255);
-  --gray: rgb(140, 140, 140);
+  --gray: rgb(120, 120, 120);
   --red: rgb(255, 51, 0);
   --blue: rgb(100, 100, 255);
   --insfg: rgb(22, 101, 52);
@@ -45,6 +45,15 @@ div.spacious {
   margin-right: auto;
   margin-bottom: 10em;
 }
+@media (max-width: 1200px) {
+  body {
+    font-size: 1.6rem;
+  }
+  div.spacious {
+    width: 90vw;
+    max-width: 800px;
+  }
+}
 div.hatnotes {
   padding: 1rem 2.5rem;
   margin-left: 1rem;
@@ -62,9 +71,6 @@ p.signature {
   text-align: right;
   font-size: 1.5rem;
 }
-div.smallmatter {
-  font-size: 0.833rem;
-}
 div.poem {
   margin-top: -2rem;
   margin-left: 2rem;
@@ -74,6 +80,9 @@ div.poem p {
   margin-block-start: 0;
   margin-block-end: 0;
   text-indent: 2rem;
+}
+span.sc {
+  font-variant-caps: small-caps;
 }
 .tightabove {
   margin-top: 0px;
@@ -88,8 +97,9 @@ div.poem p {
 .bigdiff {
   position: absolute;
   top: auto;
-  right: +1.5em;
+  right: 36px;
   width: 70px;
+  text-indent: none;
   text-align: right;
   font-style: normal;
   font-weight: normal;

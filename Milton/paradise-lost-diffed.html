@@ -1,15 +1,42 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
 <title>John Milton • Paradise Lost</title>
 <style>
+:root {
+  --black: rgb(26, 26, 26);
+  --white: rgb(255, 255, 255);
+  --gray: rgb(140, 140, 140);
+  --red: rgb(255, 51, 0);
+  --blue: rgb(100, 100, 255);
+  --insfg: rgb(22, 101, 52);
+  --insbg: rgb(220, 252, 231);
+  --delfg: rgb(153, 27, 27);
+  --delbg: rgb(254, 226, 226);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --black: rgb(255, 255, 255);
+    --white: rgb(31, 31, 31);
+    --gray: rgb(120, 120, 120);
+    --red: rgb(255, 51, 0);
+    --blue: rgb(102, 102, 204);
+    --insfg: rgb(137, 193, 143);
+    --insbg: rgb(21, 40, 27);
+    --delfg: rgb(241, 152, 130);
+    --delbg: rgb(56, 39, 39);
+  }
+}
 body {
-  color: rgb(26, 26, 26);
+  background-color: var(--white);
+  color: var(--black);
   font-family: Lora, "Lora Fallback", Georgia, "Times New Roman", serif;
   font-feature-settings: "kern", "liga", "onum";
   font-size: 1.25rem;
   line-height: 1.6;
   text-underline-offset: 0.18rem;
+  -webkit-font-smoothing: antialiased;
 }
 div.spacious {
   width: 65vw;
@@ -22,7 +49,7 @@ div.hatnotes {
   padding: 1rem 2.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  border: 1px solid black;
+  border: 1px solid var(--black);
   font-size: 1rem;
 }
 .pagebreak {
@@ -67,55 +94,55 @@ div.poem p {
   font-style: normal;
   font-weight: normal;
   text-transform: none;
-  color: #ff3300 ! important;
+  color: var(--red);
   user-select: none;
 }
 .fakediff {
   font-style: normal;
   font-weight: normal;
   text-transform: none;
-  color: #ff3300 ! important;
+  color: var(--red);
 }
 del {
-  background-color: rgb(254, 226, 226);
-  color: rgb(153, 27, 27);
+  background-color: var(--delbg);
+  color: var(--delfg);
   text-decoration: inherit;
 }
 ins {
-  background-color: rgb(220, 252, 231);
-  color: rgb(22, 101, 52);
+  background-color: var(--insbg);
+  color: var(--insfg);
   text-decoration: inherit;
 }
 span.VV {
   text-decoration: underline;
-  text-decoration-color: rgb(140, 140, 140);
+  text-decoration-color: var(--gray);
   text-decoration-style: dotted;
 }
 span.insit {
   font-style: italic;
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-decoration-color: rgb(22, 101, 52);
+  text-decoration-color: var(--insfg);
 }
 span.insnote {
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-decoration-color: rgb(22, 101, 52);
+  text-decoration-color: var(--insfg);
 }
 span.delnote {
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-decoration-color: rgb(153, 27, 27);
+  text-decoration-color: var(--delfg);
 }
 span.errata {
   text-decoration: underline;
-  text-decoration-color: rgb(140, 140, 140);
+  text-decoration-color: var(--gray);
   text-decoration-style: dotted;
 }
 a {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: rgb(100, 100, 255);
+  text-decoration-color: var(--blue);
 }
 </style>
 </head>
